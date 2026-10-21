@@ -1,0 +1,149 @@
+{
+  "_ayuda": "Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia y Kennedy. Pendientes (TODO coordenada exacta y dirección): El Cambio, El Pascual, Cali y Armenia.",
+  "general": {
+    "nombre": "PVC La Curva",
+    "telefono": "573116009755",
+    "telefono_texto": "311 600 9755",
+    "correo": "pvclacurva@gmail.com",
+    "direccion": "Calle 5 No. 14-41, Barrio La Piña Madura, Buenaventura, Valle del Cauca",
+    "instagram": "https://www.instagram.com/pvc_la_curva/",
+    "facebook": "https://www.facebook.com/PVCLaCurva",
+    "youtube": "https://www.youtube.com/channel/UCDmIGB7aMtKptVuHPY4croA"
+  },
+  "ciudades": [
+    {
+      "nombre": "Buenaventura",
+      "lat": 3.8801,
+      "lng": -77.045,
+      "zoom": 13
+    },
+    {
+      "nombre": "Cali",
+      "lat": 3.4516,
+      "lng": -76.532,
+      "zoom": 12
+    },
+    {
+      "nombre": "Armenia",
+      "lat": 4.5339,
+      "lng": -75.6811,
+      "zoom": 13
+    }
+  ],
+  "sedes": [
+    {
+      "id": "kennedy",
+      "ciudad": "Buenaventura",
+      "nombre": "Kennedy",
+      "whatsapp": "573159368735",
+      "direccion": "Calle 6, barrio Kennedy",
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": "img/sede-kennedy",
+      "lat": 3.8819822,
+      "lng": -77.0405172,
+      "estado": "activa"
+    },
+    {
+      "id": "maria-eugenia",
+      "ciudad": "Buenaventura",
+      "nombre": "María Eugenia",
+      "whatsapp": "573206481221",
+      "direccion": "Cl. 6 #41B-56",
+      "horario": "Lun a vie 8:00 a. m. – 5:00 p. m. · Sáb 8:00 a. m. – 2:00 p. m.",
+      "tipo_venta": null,
+      "productos": [
+        "Tejas (fabricación y venta directa)"
+      ],
+      "foto": "img/sede-maria-eugenia",
+      "lat": 3.8837859,
+      "lng": -77.0253436,
+      "estado": "activa"
+    },
+    {
+      "id": "independencia",
+      "ciudad": "Buenaventura",
+      "nombre": "Independencia",
+      "whatsapp": "573225419493",
+      "direccion": "Cl. 6 #61-32",
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": null,
+      "lat": 3.8737967,
+      "lng": -77.0025538,
+      "estado": "activa"
+    },
+    {
+      "id": "el-cambio",
+      "ciudad": "Buenaventura",
+      "nombre": "El Cambio",
+      "whatsapp": "573173430597",
+      "direccion": null,
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": null,
+      "lat": 3.877,
+      "lng": -77.015,
+      "estado": "activa"
+    },
+    {
+      "id": "el-pascual",
+      "ciudad": "Buenaventura",
+      "nombre": "El Pascual",
+      "whatsapp": "573151733084",
+      "direccion": null,
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": null,
+      "lat": 3.8821242,
+      "lng": -77.0562005,
+      "estado": "activa"
+    },
+    {
+      "id": "la-pina-madura",
+      "ciudad": "Buenaventura",
+      "nombre": "La Piña Madura",
+      "whatsapp": "573234198939",
+      "direccion": "Calle 5 No. 14-41, Barrio La Piña Madura",
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": "img/sede-la-pina-madura",
+      "lat": 3.8836843,
+      "lng": -77.0685675,
+      "estado": "activa"
+    },
+    {
+      "id": "cali",
+      "ciudad": "Cali",
+      "nombre": "Cali",
+      "whatsapp": null,
+      "direccion": null,
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": null,
+      "lat": 3.4516,
+      "lng": -76.532,
+      "estado": "activa"
+    },
+    {
+      "id": "armenia",
+      "ciudad": "Armenia",
+      "nombre": "Armenia",
+      "whatsapp": null,
+      "direccion": null,
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": null,
+      "lat": 4.5339,
+      "lng": -75.6811,
+      "estado": "activa"
+    }
+  ]
+}
