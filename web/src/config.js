@@ -25,6 +25,9 @@ export const waSede = (s, general, tema = '…') =>
     ? waLink(s.whatsapp, msgSede(s.nombre, tema))
     : waLink(general.telefono, `Hola PVC La Curva, vengo de la página web. Quiero hablar con la sede ${s.nombre} (${s.ciudad}) sobre ${tema}`);
 
+// Todos los números de WhatsApp de una sede (principal + adicionales)
+export const numerosSede = (s) => [s.whatsapp, ...(s.whatsapp_extra || [])].filter(Boolean);
+
 export const fmtTel = (n) => (n ? `${n.slice(2, 5)} ${n.slice(5, 8)} ${n.slice(8)}` : '');
 
 // Google Maps (sin API key): embebido y "cómo llegar"

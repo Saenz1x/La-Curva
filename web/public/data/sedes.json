@@ -1,5 +1,5 @@
 {
-  "_ayuda": "Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia y Kennedy. Pendientes (TODO coordenada exacta y dirección): El Cambio, El Pascual, Cali y Armenia.",
+  "_ayuda": "Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. whatsapp_extra (opcional) = otros números de la misma sede. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia, Kennedy y Armenia. Pendientes (TODO coordenada exacta y dirección): El Cambio, El Pascual y Cali.",
   "general": {
     "nombre": "PVC La Curva",
     "telefono": "573116009755",
@@ -135,14 +135,17 @@
       "id": "armenia",
       "ciudad": "Armenia",
       "nombre": "Armenia",
-      "whatsapp": null,
-      "direccion": null,
+      "whatsapp": "573123313726",
+      "whatsapp_extra": [
+        "573107539445"
+      ],
+      "direccion": "Carrera 19 #11-61",
       "horario": null,
       "tipo_venta": null,
       "productos": null,
       "foto": null,
-      "lat": 4.5339,
-      "lng": -75.6811,
+      "lat": 4.5392022,
+      "lng": -75.6708927,
       "estado": "activa"
     }
   ]

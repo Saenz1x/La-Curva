@@ -335,10 +335,10 @@ svg use { pointer-events: none; }
 .sede-card li { display: flex; gap: 8px; align-items: flex-start; }
 .sede-card li svg { width: 16px; height: 16px; color: var(--red); flex: none; margin-top: 3px; }
 .sede-card__actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 10px; }
-.sede-card__actions .btn { flex: 1 1 180px; min-width: 0; }
+.sede-card__actions .btn { flex: 1 1 100%; min-width: 0; }
 .sede-card li span { min-width: 0; overflow-wrap: anywhere; }
 .nowrap { white-space: nowrap; }
-@media (max-width: 520px) { .sede-card__actions .btn { flex-basis: 100%; } }
+.sede-card li a { color: inherit; text-decoration: underline; text-decoration-color: rgba(249, 0, 0, 0.6); text-underline-offset: 3px; }
 @media (min-width: 1000px) {
   .sedes__stage { grid-template-columns: 1.25fr 0.9fr; }
   .sede-card { grid-template-columns: 1fr; padding: 22px; }

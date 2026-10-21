@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import { waSede, fmtTel, mapaSede, mapaCiudad, comoLlegar } from '../config.js';
+import { waLink, msgSede, waSede, fmtTel, numerosSede, mapaSede, mapaCiudad, comoLlegar } from '../config.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 const CX = 320;
@@ -156,7 +156,7 @@ function selectSede(s, { quiet = false, origen = null } = {}) {
     s.tipo_venta && TIPO_VENTA[s.tipo_venta] && `<li><svg><use href="#i-store"/></svg><span>${TIPO_VENTA[s.tipo_venta]}</span></li>`,
     Array.isArray(s.productos) && s.productos.length && `<li><svg><use href="#i-box"/></svg><span>${s.productos.map(esc).join(' · ')}</span></li>`,
     s.whatsapp
-      ? `<li><svg><use href="#i-wa"/></svg><span>${fmtTel(s.whatsapp)}</span></li>`
+      ? `<li><svg><use href="#i-wa"/></svg><span>${numerosSede(s).map((n) => `<a class="nowrap" href="${waLink(n, msgSede(s.nombre))}" target="_blank" rel="noopener">${fmtTel(n)}</a>`).join(' · ')}</span></li>`
       : `<li><svg><use href="#i-wa"/></svg><span>Te atendemos por la línea general <span class="nowrap">${esc(D.general.telefono_texto)}</span></span></li>`,
   ].filter(Boolean);
   card.innerHTML = `

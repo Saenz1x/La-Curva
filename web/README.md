@@ -98,9 +98,9 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 ## [PENDIENTE] — lista para pedirle al cliente
 
 **Sedes**
-1. **Cali y Armenia:** dirección y número de WhatsApp de cada sede (mientras tanto, la página manda esos mensajes a la línea general). Con la dirección, también su ubicación en el mapa (hoy está el centro de cada ciudad).
+1. **Cali:** dirección y número de WhatsApp (mientras tanto, la página manda esos mensajes a la línea general). Con la dirección, también su ubicación en el mapa (hoy está el centro de la ciudad). ✔ Armenia ya está (Carrera 19 #11-61, 312 331 3726 y 310 753 9445).
 2. **El Cambio y El Pascual:** dirección y ubicación exacta (hoy aproximadas).
-3. ✔ Ubicación confirmada: Independencia (Cl. 6 #61-32), La Piña Madura (Calle 5 No. 14-41), María Eugenia (Cl. 6 #41B-56) y Kennedy (Calle 6). Falta el número exacto de la dirección de Kennedy.
+3. ✔ Ubicación confirmada: Independencia (Cl. 6 #61-32), La Piña Madura (Calle 5 No. 14-41), María Eugenia (Cl. 6 #41B-56) , Kennedy (Calle 6) y Armenia (Carrera 19 #11-61). Falta el número exacto de la dirección de Kennedy.
 4. Horario de atención de cada sede (salvo María Eugenia).
 5. Horario de Independencia: Google Maps dice "cierra a las 5 a. m.", parece un error de la ficha.
 6. Tipo de venta por sede (detal / mayor / ambas).

@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { waSede, fmtTel } from '../config.js';
+import { waSede, fmtTel, numerosSede } from '../config.js';
 import { closeWa } from './whatsapp.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -312,7 +312,7 @@ export function initReels() {
 export function initFooter(data) {
   document.getElementById('year').textContent = new Date().getFullYear();
   document.getElementById('footer-sedes').innerHTML = data.sedes.filter((s) => s.estado === 'activa').map((s) =>
-    `<li><a href="${waSede(s, data.general)}" target="_blank" rel="noopener"><b>${s.nombre}</b><span>${s.whatsapp ? fmtTel(s.whatsapp) : 'Por la línea general'}</span></a></li>`
+    `<li><a href="${waSede(s, data.general)}" target="_blank" rel="noopener"><b>${s.nombre}</b><span>${s.whatsapp ? numerosSede(s).map(fmtTel).join(' · ') : 'Por la línea general'}</span></a></li>`
   ).join('');
 }
 

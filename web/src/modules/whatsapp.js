@@ -1,4 +1,4 @@
-import { waLink, waSede, fmtTel } from '../config.js';
+import { waLink, waSede, msgSede, fmtTel } from '../config.js';
 
 let state = { data: null, tema: null };
 const panel = () => document.getElementById('wa-panel');
@@ -14,10 +14,14 @@ function render() {
     const sedes = activas.filter((s) => s.ciudad === c.nombre);
     if (!sedes.length) continue;
     items.push(`<li class="wa-panel__group">${c.nombre}</li>`);
-    sedes.forEach((s) =>
+    sedes.forEach((s) => {
       items.push(`<li><a href="${waSede(s, data.general, temaTxt)}" target="_blank" rel="noopener">
-        <div><b>Sede ${s.nombre}</b><span>${s.whatsapp ? fmtTel(s.whatsapp) : 'Te atendemos por la línea general'}</span></div><svg><use href="#i-wa"/></svg></a></li>`)
-    );
+        <div><b>Sede ${s.nombre}</b><span>${s.whatsapp ? fmtTel(s.whatsapp) : 'Te atendemos por la línea general'}</span></div><svg><use href="#i-wa"/></svg></a></li>`);
+      (s.whatsapp_extra || []).forEach((n, k) =>
+        items.push(`<li><a href="${waLink(n, msgSede(s.nombre, temaTxt))}" target="_blank" rel="noopener">
+          <div><b>Sede ${s.nombre} · línea ${k + 2}</b><span>${fmtTel(n)}</span></div><svg><use href="#i-wa"/></svg></a></li>`)
+      );
+    });
   }
   items.push(
     `<li><a class="is-general" href="${waLink(data.general.telefono, `Hola PVC La Curva, vengo de la página web y quiero información sobre ${temaTxt}`)}" target="_blank" rel="noopener">
