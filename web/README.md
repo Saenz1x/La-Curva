@@ -49,7 +49,7 @@ Todo está en **`public/data/sedes.json`**. Para una sede nueva copia un objeto 
 }
 ```
 
-- `whatsapp`: con 57 adelante, sin espacios ni `+`. Si todavía no hay número, `null`: la página manda el mensaje a la línea general diciendo de qué sede se trata (así están hoy Cali y Armenia).
+- `whatsapp`: con 57 adelante, sin espacios ni `+`. Si todavía no hay número, `null`: la página manda el mensaje a la línea general diciendo de qué sede se trata (hoy ninguna sede está así).
 - `tipo_venta`: `"detal"`, `"mayor"`, `"ambas"` o `null`.
 - `foto`: ruta **sin extensión**; deja dos archivos en `public/img/` (`.jpg` y `.webp`). Si no hay foto, `null`.
 - `lat` / `lng`: el pin del mapa y el botón "Cómo llegar". Se sacan en Google Maps con clic derecho sobre el local → copiar coordenadas.
@@ -98,7 +98,7 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 ## [PENDIENTE] — lista para pedirle al cliente
 
 **Sedes**
-1. **Cali:** dirección y número de WhatsApp (mientras tanto, la página manda esos mensajes a la línea general). Con la dirección, también su ubicación en el mapa (hoy está el centro de la ciudad). ✔ Armenia ya está (Carrera 19 #11-61, 312 331 3726 y 310 753 9445).
+1. ✔ Cali (Cl. 25 #8-30, 313 774 8009) y Armenia (Carrera 19 #11-61, 312 331 3726 y 310 753 9445): datos y ubicación listos.
 2. **El Cambio y El Pascual:** dirección y ubicación exacta (hoy aproximadas).
 3. ✔ Ubicación confirmada: Independencia (Cl. 6 #61-32), La Piña Madura (Calle 5 No. 14-41), María Eugenia (Cl. 6 #41B-56) , Kennedy (Calle 6) y Armenia (Carrera 19 #11-61). Falta el número exacto de la dirección de Kennedy.
 4. Horario de atención de cada sede (salvo María Eugenia).
