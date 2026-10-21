@@ -26,7 +26,7 @@ npm run preview    # sirve dist en http://localhost:4173
 - **Vercel:** importa el repo, *Root Directory* `web`, framework "Vite". Vercel detecta el resto.
 - **GitHub Pages:** sube el contenido de `dist/` a la rama `gh-pages` (o usa la acción oficial "Deploy static content to Pages" apuntando a `web/dist`).
 
-Cuando tengan dominio, cambia `og:image` en `index.html` por la URL absoluta (`https://dominio.com/img/og.jpg`) para que la vista previa en WhatsApp salga siempre.
+El dominio es **pvclacurva.com** (DNS en Hostinger apuntando a GitHub Pages). Si algún día cambia, actualiza `public/CNAME`, `public/sitemap.xml`, `public/robots.txt` y las etiquetas `canonical` / `og:` de `index.html`.
 
 ## Agregar o editar una sede
 
@@ -117,4 +117,4 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 13. Fotos reales de antes y después de un cliente para el deslizador.
 14. Condiciones de los envíos a otras ciudades (tiempos, transportadora, quién paga el flete), si quieren publicarlas.
 15. Testimonios, cifras de clientes, años de experiencia: no se pusieron porque no hay datos.
-16. Dominio definitivo (para `og:image` absoluta y el `sitemap`).
+16. ✔ Dominio: pvclacurva.com (ya configurado en `index.html`, `sitemap.xml`, `robots.txt` y `public/CNAME`).
