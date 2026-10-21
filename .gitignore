@@ -4,6 +4,7 @@
 !/Logo/
 !/README.md
 !/.gitignore
+!/.github/
 
 # dentro de web/
 web/node_modules/
