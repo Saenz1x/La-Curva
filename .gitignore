@@ -12,3 +12,6 @@ web/dist/
 .DS_Store
 Thumbs.db
 web/.claude/
+# Archivos de trabajo locales (no se publican)
+web/PROMPT_WEB_LA_CURVA.md
+web/referencia-estetica.png
