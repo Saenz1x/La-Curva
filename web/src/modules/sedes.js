@@ -158,6 +158,7 @@ function selectSede(s, { quiet = false, origen = null } = {}) {
     s.whatsapp
       ? `<li><svg><use href="#i-wa"/></svg><span>${numerosSede(s).map((n) => `<a class="nowrap" href="${waLink(n, msgSede(s.nombre))}" target="_blank" rel="noopener">${fmtTel(n)}</a>`).join(' · ')}</span></li>`
       : `<li><svg><use href="#i-wa"/></svg><span>Te atendemos por la línea general <span class="nowrap">${esc(D.general.telefono_texto)}</span></span></li>`,
+    `<li><svg><use href="#i-mail"/></svg><a class="nowrap" href="mailto:${esc(s.correo || D.general.correo)}">${esc(s.correo || D.general.correo)}</a></li>`,
   ].filter(Boolean);
   card.innerHTML = `
     ${foto(s)}

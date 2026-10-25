@@ -1,10 +1,10 @@
 {
-  "_ayuda": "Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. whatsapp_extra (opcional) = otros números de la misma sede. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia, Kennedy, Armenia y Cali. Pendientes (TODO coordenada exacta y dirección): El Cambio y El Pascual.",
+  "_ayuda": "Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. whatsapp_extra (opcional) = otros números de la misma sede. correo (opcional) = correo de la sede o de su ciudad; si falta se usa el correo general. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia, Kennedy, El Cambio, El Pascual, Armenia y Cali. Pendiente (TODO coordenada exacta): Bucaramanga (la actual es aproximada, barrio Ricaurte).",
   "general": {
     "nombre": "PVC La Curva",
     "telefono": "573116009755",
     "telefono_texto": "311 600 9755",
-    "correo": "pvclacurva@gmail.com",
+    "correo": "pvclacurva.co@gmail.com",
     "direccion": "Calle 5 No. 14-41, Barrio La Piña Madura, Buenaventura, Valle del Cauca",
     "instagram": "https://www.instagram.com/pvc_la_curva/",
     "facebook": "https://www.facebook.com/PVCLaCurva",
@@ -28,6 +28,12 @@
       "lat": 4.5339,
       "lng": -75.6811,
       "zoom": 13
+    },
+    {
+      "nombre": "Bucaramanga",
+      "lat": 7.1193,
+      "lng": -73.1227,
+      "zoom": 13
     }
   ],
   "sedes": [
@@ -36,6 +42,7 @@
       "ciudad": "Buenaventura",
       "nombre": "Kennedy",
       "whatsapp": "573159368735",
+      "correo": "pvclacurva.tura@gmail.com",
       "direccion": "Calle 6, barrio Kennedy",
       "horario": null,
       "tipo_venta": null,
@@ -50,6 +57,7 @@
       "ciudad": "Buenaventura",
       "nombre": "María Eugenia",
       "whatsapp": "573206481221",
+      "correo": "pvclacurva.tura@gmail.com",
       "direccion": "Cl. 6 #41B-56",
       "horario": "Lun a vie 8:00 a. m. – 5:00 p. m. · Sáb 8:00 a. m. – 2:00 p. m.",
       "tipo_venta": null,
@@ -66,6 +74,7 @@
       "ciudad": "Buenaventura",
       "nombre": "Independencia",
       "whatsapp": "573225419493",
+      "correo": "pvclacurva.tura@gmail.com",
       "direccion": "Cl. 6 #61-32",
       "horario": null,
       "tipo_venta": null,
@@ -80,13 +89,14 @@
       "ciudad": "Buenaventura",
       "nombre": "El Cambio",
       "whatsapp": "573173430597",
-      "direccion": null,
+      "correo": "pvclacurva.tura@gmail.com",
+      "direccion": "Cl. 1 #70-27",
       "horario": null,
       "tipo_venta": null,
       "productos": null,
       "foto": null,
-      "lat": 3.877,
-      "lng": -77.015,
+      "lat": 3.8673578,
+      "lng": -76.995037,
       "estado": "activa"
     },
     {
@@ -94,13 +104,14 @@
       "ciudad": "Buenaventura",
       "nombre": "El Pascual",
       "whatsapp": "573151733084",
-      "direccion": null,
+      "correo": "pvclacurva.tura@gmail.com",
+      "direccion": "Cl. 5 #10-04",
       "horario": null,
       "tipo_venta": null,
       "productos": null,
       "foto": null,
-      "lat": 3.8821242,
-      "lng": -77.0562005,
+      "lat": 3.8844575,
+      "lng": -77.0711317,
       "estado": "activa"
     },
     {
@@ -108,6 +119,7 @@
       "ciudad": "Buenaventura",
       "nombre": "La Piña Madura",
       "whatsapp": "573234198939",
+      "correo": "pvclacurva.tura@gmail.com",
       "direccion": "Calle 5 No. 14-41, Barrio La Piña Madura",
       "horario": null,
       "tipo_venta": null,
@@ -122,6 +134,7 @@
       "ciudad": "Cali",
       "nombre": "Cali",
       "whatsapp": "573137748009",
+      "correo": "pvclacurva.cali@gmail.com",
       "direccion": "Cl. 25 #8-30",
       "horario": null,
       "tipo_venta": null,
@@ -139,6 +152,7 @@
       "whatsapp_extra": [
         "573107539445"
       ],
+      "correo": "pvclacurva.armenia@gmail.com",
       "direccion": "Carrera 19 #11-61",
       "horario": null,
       "tipo_venta": null,
@@ -146,6 +160,21 @@
       "foto": null,
       "lat": 4.5392022,
       "lng": -75.6708927,
+      "estado": "activa"
+    },
+    {
+      "id": "bucaramanga",
+      "ciudad": "Bucaramanga",
+      "nombre": "Bucaramanga",
+      "whatsapp": "573103787447",
+      "correo": null,
+      "direccion": "Cra. 17 #59-130, barrio Ricaurte",
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": null,
+      "lat": 7.1003,
+      "lng": -73.1262,
       "estado": "activa"
     }
   ]
