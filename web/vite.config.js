@@ -1,35 +1,38 @@
 import { defineConfig } from 'vite';
 import { readFileSync } from 'node:fs';
+import { renderDirectorio } from './src/directorio.js';
+import { sedesActivas, correoSede, ciudadDe } from './src/config.js';
 
-// Inyecta en el HTML los datos estructurados LocalBusiness de cada sede activa,
-// leídos de public/data/sedes.json en cada build (agregar una sede no requiere tocar código).
-function sedesJsonLd() {
+const leerSedes = () => JSON.parse(readFileSync(new URL('./public/data/sedes.json', import.meta.url), 'utf8'));
+
+// Arma desde public/data/sedes.json lo fijo de la página: contadores, ciudades, preguntas frecuentes,
+// pie de página y los datos estructurados LocalBusiness de cada sede activa.
+// Agregar o cambiar una sede no requiere tocar código.
+function sedesHtml() {
   return {
-    name: 'sedes-jsonld',
+    name: 'sedes-html',
     transformIndexHtml(html) {
-      const data = JSON.parse(readFileSync(new URL('./public/data/sedes.json', import.meta.url), 'utf8'));
+      const data = leerSedes();
       const g = data.general;
-      const items = data.sedes
-        .filter((s) => s.estado === 'activa')
-        .map((s) => ({
-          '@type': 'HardwareStore',
-          name: `${g.nombre} – Sede ${s.nombre}`,
-          telephone: s.whatsapp ? `+${s.whatsapp}` : `+${g.telefono}`,
-          email: s.correo || g.correo,
-          image: s.foto ? `${s.foto}.jpg` : 'img/logo-circulo.png',
-          areaServed: 'CO',
-          address: {
-            '@type': 'PostalAddress',
-            ...(s.direccion ? { streetAddress: s.direccion } : {}),
-            addressLocality: s.ciudad,
-            addressRegion: { Armenia: 'Quindío', Bucaramanga: 'Santander' }[s.ciudad] || 'Valle del Cauca',
-            addressCountry: 'CO',
-          },
-          ...(s.lat != null ? { geo: { '@type': 'GeoCoordinates', latitude: s.lat, longitude: s.lng } } : {}),
-          sameAs: [g.instagram, g.facebook, g.youtube],
-        }));
+      const items = sedesActivas(data).map((s) => ({
+        '@type': 'HardwareStore',
+        name: `${g.nombre} – Sede ${s.nombre}`,
+        telephone: s.whatsapp ? `+${s.whatsapp}` : `+${g.telefono}`,
+        email: correoSede(s, data),
+        image: s.foto ? `${s.foto}.jpg` : 'img/logo-circulo.png',
+        areaServed: 'CO',
+        address: {
+          '@type': 'PostalAddress',
+          ...(s.direccion ? { streetAddress: s.direccion } : {}),
+          addressLocality: s.ciudad,
+          ...(ciudadDe(s, data).departamento ? { addressRegion: ciudadDe(s, data).departamento } : {}),
+          addressCountry: 'CO',
+        },
+        ...(s.lat != null ? { geo: { '@type': 'GeoCoordinates', latitude: s.lat, longitude: s.lng } } : {}),
+        sameAs: [g.instagram, g.facebook, g.youtube],
+      }));
       const ld = { '@context': 'https://schema.org', '@graph': items };
-      return html.replace('<!--SEDES_JSONLD-->', `<script type="application/ld+json">${JSON.stringify(ld)}</script>`);
+      return renderDirectorio(html, data).replace('<!--SEDES_JSONLD-->', `<script type="application/ld+json">${JSON.stringify(ld)}</script>`);
     },
   };
 }
@@ -48,6 +51,6 @@ function preloadFuenteTitular() {
 
 export default defineConfig({
   base: './',
-  plugins: [sedesJsonLd(), preloadFuenteTitular()],
+  plugins: [sedesHtml(), preloadFuenteTitular()],
   build: { target: 'es2019', assetsInlineLimit: 0 },
 });

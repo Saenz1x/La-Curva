@@ -1,15 +1,18 @@
-import { PRODUCTOS_CALC, DESPERDICIO_DEFECTO, waLink } from '../config.js';
+import { PRODUCTOS_CALC, DESPERDICIO_DEFECTO, waLink, sedesActivas, ciudadesActivas } from '../config.js';
 
 const fmt = (n, d = 1) => n.toLocaleString('es-CO', { minimumFractionDigits: d, maximumFractionDigits: d });
 
 export function initCalculadora(data) {
   const f = document.getElementById('calc-form');
-  // Las sedes sin número propio (Cali, Armenia) van a la línea general, nombrando la sede en el mensaje
-  const sedes = data.sedes.filter((s) => s.estado === 'activa');
+  // Sedes agrupadas por ciudad; las que no tienen número propio van a la línea general, nombrando la sede en el mensaje
+  const sedes = sedesActivas(data);
   f.producto.innerHTML = PRODUCTOS_CALC.map((p) => `<option value="${p.id}">${p.nombre}</option>`).join('');
   f.sede.innerHTML =
-    sedes.map((s) => `<option value="${s.whatsapp || data.general.telefono}" data-nombre="${s.nombre}">Sede ${s.nombre} (${s.ciudad})</option>`).join('') +
-    `<option value="${data.general.telefono}" data-nombre="">Línea general · ${data.general.telefono_texto}</option>`;
+    ciudadesActivas(data).map((c) => `<optgroup label="${c.nombre}">${sedes
+      .filter((s) => s.ciudad === c.nombre)
+      .map((s) => `<option value="${s.whatsapp || data.general.telefono}" data-nombre="${s.nombre}">Sede ${s.nombre}${s.direccion ? ` · ${s.direccion}` : ''}</option>`)
+      .join('')}</optgroup>`).join('') +
+    `<optgroup label="Todo el país"><option value="${data.general.telefono}" data-nombre="">Línea general · ${data.general.telefono_texto}</option></optgroup>`;
   f.desperdicio.value = DESPERDICIO_DEFECTO;
 
   const out = {

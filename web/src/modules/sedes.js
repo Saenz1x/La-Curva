@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-import { waLink, msgSede, waSede, fmtTel, numerosSede, mapaSede, mapaCiudad, comoLlegar } from '../config.js';
+import { waLink, msgSede, waSede, fmtTel, numerosSede, mapaSede, mapaCiudad, comoLlegar, correoSede, ciudadDe } from '../config.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
 const CX = 320;
@@ -140,7 +140,8 @@ function cardOverview(ciudad) {
     <div>
       <p class="sede-card__kicker">${esc(ciudad)}</p>
       <h3>${sedes.length} sedes para atenderte</h3>
-      <p class="small muted" style="margin:0">Toca un pin o elige aquí:</p>
+      <ul><li><svg><use href="#i-mail"/></svg><span><a href="mailto:${esc(correoSede({ ciudad }, D))}">${esc(correoSede({ ciudad }, D))}</a></span></li></ul>
+      <p class="small muted" style="margin:8px 0 0">Toca un pin o elige aquí:</p>
     </div>
     <div class="chips" style="grid-column:1/-1">${sedes.map((s) => `<button class="chip" data-sede="${s.id}">${esc(s.nombre)}</button>`).join('')}</div>`;
   card.hidden = false;
@@ -151,14 +152,14 @@ function selectSede(s, { quiet = false, origen = null } = {}) {
   document.querySelectorAll('.c-pin').forEach((p) => p.classList.toggle('is-active', p.dataset.id === s.id));
   const card = $('#sede-card');
   const info = [
-    s.direccion && `<li><svg><use href="#i-pin"/></svg><span>${esc(s.direccion)}</span></li>`,
+    `<li><svg><use href="#i-pin"/></svg><span>${s.direccion ? `${esc(s.direccion)}<br />` : 'Dirección por confirmar · '}<span class="muted">${esc([s.ciudad, ciudadDe(s, D).departamento].filter(Boolean).join(', '))}</span></span></li>`,
     s.horario && `<li><svg><use href="#i-clock"/></svg><span>${esc(s.horario)}</span></li>`,
     s.tipo_venta && TIPO_VENTA[s.tipo_venta] && `<li><svg><use href="#i-store"/></svg><span>${TIPO_VENTA[s.tipo_venta]}</span></li>`,
     Array.isArray(s.productos) && s.productos.length && `<li><svg><use href="#i-box"/></svg><span>${s.productos.map(esc).join(' · ')}</span></li>`,
     s.whatsapp
       ? `<li><svg><use href="#i-wa"/></svg><span>${numerosSede(s).map((n) => `<a class="nowrap" href="${waLink(n, msgSede(s.nombre))}" target="_blank" rel="noopener">${fmtTel(n)}</a>`).join(' · ')}</span></li>`
       : `<li><svg><use href="#i-wa"/></svg><span>Te atendemos por la línea general <span class="nowrap">${esc(D.general.telefono_texto)}</span></span></li>`,
-    `<li><svg><use href="#i-mail"/></svg><a class="nowrap" href="mailto:${esc(s.correo || D.general.correo)}">${esc(s.correo || D.general.correo)}</a></li>`,
+    `<li><svg><use href="#i-mail"/></svg><span><a href="mailto:${esc(correoSede(s, D))}">${esc(correoSede(s, D))}</a></span></li>`,
   ].filter(Boolean);
   card.innerHTML = `
     ${foto(s)}
@@ -189,6 +190,8 @@ function movePill() {
   const pill = tabs.querySelector('.city-tabs__pill');
   pill.style.width = `${on.offsetWidth}px`;
   pill.style.transform = `translateX(${on.offsetLeft}px)`;
+  // si las pestañas se deslizan (celular), deja visible la ciudad elegida
+  if (tabs.scrollWidth > tabs.clientWidth) tabs.scrollTo({ left: on.offsetLeft - (tabs.clientWidth - on.offsetWidth) / 2, behavior: reduce ? 'auto' : 'smooth' });
 }
 
 function buildTabs() {

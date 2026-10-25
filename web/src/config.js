@@ -38,3 +38,17 @@ export const mapaCiudad = (c, hayFichas) =>
   `https://maps.google.com/maps?q=${encodeURIComponent(hayFichas ? `PVC La Curva ${c.nombre}` : `${c.nombre}, Colombia`)}&z=${c.zoom}&hl=es&output=embed`;
 export const comoLlegar = (s, origen) =>
   `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(lugar(s))}${origen ? `&origin=${origen.lat},${origen.lng}` : ''}`;
+
+// ----- Datos de sedes (public/data/sedes.json) -----
+export const sedesActivas = (data) => data.sedes.filter((s) => s.estado === 'activa');
+
+// Ciudades con al menos una sede activa, en el orden de sedes.json
+export const ciudadesActivas = (data) => data.ciudades.filter((c) => sedesActivas(data).some((s) => s.ciudad === c.nombre));
+
+export const ciudadDe = (s, data) => data.ciudades.find((c) => c.nombre === s.ciudad) || {};
+
+// Correo de una sede: el propio, si no el de su ciudad, si no el nacional
+export const correoSede = (s, data) => s.correo || ciudadDe(s, data).correo || data.general.correo;
+
+// "Buenaventura, Cali y Armenia"
+export const enumerar = (xs) => (xs.length < 2 ? xs.join('') : `${xs.slice(0, -1).join(', ')} y ${xs[xs.length - 1]}`);

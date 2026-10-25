@@ -54,9 +54,25 @@ Todo está en **`public/data/sedes.json`**. Para una sede nueva copia un objeto 
 - `foto`: ruta **sin extensión**; deja dos archivos en `public/img/` (`.jpg` y `.webp`). Si no hay foto, `null`.
 - `lat` / `lng`: el pin del mapa y el botón "Cómo llegar". Se sacan en Google Maps con clic derecho sobre el local → copiar coordenadas.
 - Cualquier dato que no tengas va en `null` y la página lo oculta.
-- Una ciudad nueva se agrega en la lista `ciudades` (nombre, centro del mapa y zoom).
+- `correo` (opcional): solo si la sede tiene un correo propio distinto al de su ciudad.
+- Una ciudad nueva se agrega en la lista `ciudades`: `nombre`, `departamento`, `correo` (o `null` para usar el general), centro del mapa (`lat`, `lng`) y `zoom`.
+- `general`: línea general, **correo nacional**, dirección de la sede principal y redes.
 
-La constelación, el mapa, el botón de WhatsApp, la calculadora, el footer y los datos estructurados de Google (`LocalBusiness`, se generan al hacer `npm run build`) salen de este archivo. No hay que tocar código.
+Todo sale de este archivo, sin tocar código:
+
+| Dónde se ve | Qué muestra |
+| --- | --- |
+| Inicio y franja de datos | Número de sedes y ciudades |
+| Título y descripción para Google | Lista de ciudades |
+| Sedes (constelación, tarjeta y Google Maps) | Dirección, ciudad y departamento, WhatsApp y correo de cada sede |
+| Botón de WhatsApp | Sedes por ciudad con número y dirección |
+| Calculadora | Sedes por ciudad para enviar el pedido |
+| Mayoristas | Ciudades sugeridas y correo general |
+| Preguntas frecuentes | Directorio de sedes por ciudad y lista de correos |
+| Pie de página | Contacto general y una tarjeta por ciudad con su correo y sus sedes |
+| Datos estructurados (`LocalBusiness`) | Dirección, teléfono, correo y coordenadas por sede |
+
+Los contadores, textos de ciudades, preguntas frecuentes, pie de página y datos estructurados se escriben en el HTML al hacer `npm run build` (`src/directorio.js` y `vite.config.js`), así Google los lee sin JavaScript. En `index.html` aparecen como marcas `{{sedes.…}}`.
 
 ## Otras cosas editables
 
@@ -99,12 +115,13 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 
 **Sedes**
 1. ✔ Cali (Cl. 25 #8-30, 313 774 8009) y Armenia (Carrera 19 #11-61, 312 331 3726 y 310 753 9445): datos y ubicación listos.
-2. **El Cambio y El Pascual:** dirección y ubicación exacta (hoy aproximadas).
+2. ✔ El Cambio (Cl. 1 #70-27) y El Pascual (Cl. 5 #10-04): dirección y ubicación listas.
+   **Bucaramanga** (Cra. 17 #59-130, barrio Ricaurte, 310 378 7447): falta la ubicación exacta en Google Maps (hoy aproximada) y saber si tendrá correo propio (hoy usa el general).
 3. ✔ Ubicación confirmada: Independencia (Cl. 6 #61-32), La Piña Madura (Calle 5 No. 14-41), María Eugenia (Cl. 6 #41B-56) , Kennedy (Calle 6) y Armenia (Carrera 19 #11-61). Falta el número exacto de la dirección de Kennedy.
 4. Horario de atención de cada sede (salvo María Eugenia).
 5. Horario de Independencia: Google Maps dice "cierra a las 5 a. m.", parece un error de la ficha.
 6. Tipo de venta por sede (detal / mayor / ambas).
-7. Fotos de fachada de El Cambio, Independencia, El Pascual, Cali y Armenia.
+7. Fotos de fachada de El Cambio, Independencia, El Pascual, Cali, Armenia y Bucaramanga.
 8. Sugerencia: crear o reclamar la ficha de Google Maps de cada sede, para que todas salgan en el mapa.
 
 **Productos**

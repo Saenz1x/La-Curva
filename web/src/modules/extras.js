@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { waSede, fmtTel, numerosSede } from '../config.js';
+import { ciudadesActivas } from '../config.js';
 import { closeWa } from './whatsapp.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -309,16 +309,17 @@ export function initReels() {
 }
 
 /* ---------- footer ---------- */
-export function initFooter(data) {
+// Las sedes y el contacto del pie se arman al compilar desde sedes.json (src/directorio.js)
+export function initFooter() {
   document.getElementById('year').textContent = new Date().getFullYear();
-  document.getElementById('footer-sedes').innerHTML = data.sedes.filter((s) => s.estado === 'activa').map((s) =>
-    `<li><a href="${waSede(s, data.general)}" target="_blank" rel="noopener"><b>${s.nombre}</b><span>${s.whatsapp ? numerosSede(s).map(fmtTel).join(' · ') : 'Por la línea general'}</span></a></li>`
-  ).join('');
 }
 
 /* ---------- formulario mayoristas ---------- */
 export function initMayoristas(data) {
   const f = document.getElementById('mayor-form');
+  // Sugiere las ciudades donde hay sede (se puede escribir cualquier otra)
+  f.ciudad.setAttribute('list', 'mayor-ciudades');
+  f.insertAdjacentHTML('beforeend', `<datalist id="mayor-ciudades">${ciudadesActivas(data).map((c) => `<option value="${c.nombre}"></option>`).join('')}</datalist>`);
   f.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!f.reportValidity()) return;

@@ -1,4 +1,4 @@
-import { waLink, waSede, msgSede, fmtTel } from '../config.js';
+import { waLink, waSede, msgSede, fmtTel, sedesActivas } from '../config.js';
 
 let state = { data: null, tema: null };
 const panel = () => document.getElementById('wa-panel');
@@ -8,7 +8,7 @@ function render() {
   const { data, tema } = state;
   const list = document.getElementById('wa-list');
   const temaTxt = tema || '…';
-  const activas = data.sedes.filter((s) => s.estado === 'activa');
+  const activas = sedesActivas(data);
   const items = [];
   for (const c of data.ciudades) {
     const sedes = activas.filter((s) => s.ciudad === c.nombre);
@@ -16,7 +16,7 @@ function render() {
     items.push(`<li class="wa-panel__group">${c.nombre}</li>`);
     sedes.forEach((s) => {
       items.push(`<li><a href="${waSede(s, data.general, temaTxt)}" target="_blank" rel="noopener">
-        <div><b>Sede ${s.nombre}</b><span>${s.whatsapp ? fmtTel(s.whatsapp) : 'Te atendemos por la línea general'}</span></div><svg><use href="#i-wa"/></svg></a></li>`);
+        <div><b>Sede ${s.nombre}</b><span>${[s.whatsapp ? fmtTel(s.whatsapp) : 'Por la línea general', s.direccion].filter(Boolean).join(' · ')}</span></div><svg><use href="#i-wa"/></svg></a></li>`);
       (s.whatsapp_extra || []).forEach((n, k) =>
         items.push(`<li><a href="${waLink(n, msgSede(s.nombre, temaTxt))}" target="_blank" rel="noopener">
           <div><b>Sede ${s.nombre} · línea ${k + 2}</b><span>${fmtTel(n)}</span></div><svg><use href="#i-wa"/></svg></a></li>`)

@@ -29,6 +29,7 @@ initAntesDespues(opts);
 initComparativo();
 initReels();
 initPointer(opts);
+initFooter();
 
 fetch('data/sedes.json')
   .then((r) => r.json())
@@ -36,7 +37,6 @@ fetch('data/sedes.json')
     initWhatsapp(data);
     initSedes(data, opts);
     initCalculadora(data);
-    initFooter(data);
     initMayoristas(data);
   })
   .catch((err) => console.error('No se pudo cargar sedes.json', err))
