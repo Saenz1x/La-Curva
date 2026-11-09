@@ -49,14 +49,14 @@ Todo está en **`public/data/sedes.json`**. Para una sede nueva copia un objeto 
 }
 ```
 
-- `whatsapp`: con 57 adelante, sin espacios ni `+`. Si todavía no hay número, `null`: la página manda el mensaje a la línea general diciendo de qué sede se trata (hoy ninguna sede está así).
+- `whatsapp`: con 57 adelante, sin espacios ni `+`. Si todavía no hay número, `null`: la página manda el mensaje a la línea general diciendo de qué sede se trata.
 - `tipo_venta`: `"detal"`, `"mayor"`, `"ambas"` o `null`.
 - `foto`: ruta **sin extensión**; deja dos archivos en `public/img/` (`.jpg` y `.webp`). Si no hay foto, `null`.
 - `lat` / `lng`: el pin del mapa y el botón "Cómo llegar". Se sacan en Google Maps con clic derecho sobre el local → copiar coordenadas.
 - Cualquier dato que no tengas va en `null` y la página lo oculta.
 - `correo` (opcional): solo si la sede tiene un correo propio distinto al de su ciudad.
 - Una ciudad nueva se agrega en la lista `ciudades`: `nombre`, `departamento`, `correo` (o `null` para usar el general), centro del mapa (`lat`, `lng`) y `zoom`.
-- `general`: línea general, **correo nacional**, sede principal (`sede_principal`, hoy María Eugenia) con su dirección, y redes.
+- `general`: línea general, **correo nacional**, sede principal (`sede_principal`) con su dirección, y redes.
 
 Todo sale de este archivo, sin tocar código:
 
@@ -126,36 +126,3 @@ Si el equipo tiene activado *reducir movimiento* (en Windows: Configuración →
 ## Lighthouse (móvil, build de producción en local)
 
 Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
-
----
-
-## [PENDIENTE] — lista para pedirle al cliente
-
-**Sedes**
-1. ✔ Cali (Cl. 25 #8-30, 313 774 8009) y Armenia (Carrera 19 #11-61, 312 331 3726 y 310 753 9445): datos y ubicación listos.
-2. ✔ El Cambio (Cl. 1 #70-27) y El Pascual (Cl. 5 #10-04): dirección y ubicación listas.
-   **Bucaramanga** (Cra. 17 #59-130, barrio Ricaurte, 310 378 7447): falta la ubicación exacta en Google Maps (hoy aproximada) y saber si tendrá correo propio (hoy usa el general).
-   **Pereira** (Cra. 7 #30-57, 316 659 6290, pvclacurvapereira@gmail.com): falta la ubicación exacta en Google Maps (hoy aproximada).
-3. ✔ Ubicación confirmada: Independencia (Cl. 6 #61-32), La Piña Madura (Calle 5 No. 14-41), María Eugenia (Cl. 6 #41B-56) , Kennedy (Calle 6) y Armenia (Carrera 19 #11-61). Falta el número exacto de la dirección de Kennedy.
-4. Horario de atención de cada sede (salvo María Eugenia).
-5. Horario de Independencia: Google Maps dice "cierra a las 5 a. m.", parece un error de la ficha.
-6. Tipo de venta por sede (detal / mayor / ambas).
-7. Fotos de fachada de El Cambio, Independencia, El Pascual, Cali, Armenia, Bucaramanga y Pereira.
-8. Sugerencia: crear o reclamar la ficha de Google Maps de cada sede, para que todas salgan en el mapa.
-
-**Legal y Tarjeta Premium**
-- **NIT y razón social exacta** para la política de datos y los términos (hoy dicen «Estructura y PVC La Curva», sin NIT).
-- Revisar con el contador o abogado las condiciones de la Tarjeta Premium (`terminos/#premium`): beneficios, topes, vigencia del saldo.
-- URL del webhook de n8n para recibir las solicitudes Premium.
-
-**Productos**
-9. Medidas reales de cada pieza para la calculadora (`src/config.js`): lámina de cielo raso (hoy 0,25 × 5,95 m), panel 3D (0,50 × 0,50 m), m² por caja de piso SPC (2,2 m²), lámina marmolizada y lámina PVC (1,22 × 2,44 m), rollo de adhesivo (0,45 × 10 m).
-10. Fotos propias de productos instalados, para reemplazar las de referencia.
-11. Revisar los textos de producto y la tabla comparativa (PVC vs. yeso vs. mármol). Son generales y no traen cifras.
-12. Validar con el equipo los 4 pasos de la guía de instalación.
-
-**Contenido**
-13. Fotos reales de antes y después de un cliente para el deslizador.
-14. Condiciones de los envíos a otras ciudades (tiempos, transportadora, quién paga el flete), si quieren publicarlas.
-15. Testimonios, cifras de clientes, años de experiencia: no se pusieron porque no hay datos.
-16. ✔ Dominio: pvclacurva.com (ya configurado en `index.html`, `sitemap.xml`, `robots.txt` y `public/CNAME`).
