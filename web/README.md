@@ -79,7 +79,7 @@ Los contadores, textos de ciudades, preguntas frecuentes, pie de página y datos
 Página para clientes invitados: **https://pvclacurva.com/premium/**. No está enlazada desde el sitio, no aparece en el sitemap y tiene `noindex`, así que Google no la muestra. Ojo: cualquiera que tenga el enlace puede abrirla; la aprobación de cada solicitud la hace el equipo.
 
 - Para saber de dónde llegó cada cliente, comparte el enlace con `?utm_source=`, por ejemplo `pvclacurva.com/premium/?utm_source=cali-mostrador`. El valor llega en el campo `origen`.
-- **Envío de solicitudes:** mientras `window.N8N_WEBHOOK_URL` (al inicio de `premium/index.html`) esté vacío, el formulario abre WhatsApp con la solicitud lista para el número del programa Premium (**312 430 8996**, campo `general.premium_whatsapp` de `sedes.json`). Cuando el webhook de n8n esté listo, pega su URL ahí y las solicitudes llegarán por POST en JSON (`nombre`, `documento`, `whatsapp`, `correo`, `tipo_cliente`, `sede`, `intereses`, `autoriza_datos`, `fecha_registro`, `estado`, `origen`).
+- **Envío de solicitudes:** mientras `window.N8N_WEBHOOK_URL` (al inicio de `premium/index.html`) esté vacío, el formulario abre WhatsApp con la solicitud lista para el número del programa Premium (campo `general.premium_whatsapp` de `sedes.json`). Cuando el webhook de n8n esté listo, pega su URL ahí y las solicitudes llegarán por POST en JSON (`nombre`, `documento`, `whatsapp`, `correo`, `tipo_cliente`, `sede`, `intereses`, `autoriza_datos`, `fecha_registro`, `estado`, `origen`).
 - La imagen de la tarjeta es `premium/tarjeta.webp`.
 
 ## Páginas legales
