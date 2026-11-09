@@ -75,6 +75,10 @@ export function renderDirectorio(html, data) {
     telefono: esc(data.general.telefono),
     'telefono-texto': esc(data.general.telefono_texto),
     direccion: esc(data.general.direccion),
+    'premium-whatsapp': esc(data.general.premium_whatsapp || data.general.telefono),
+    'premium-whatsapp-texto': esc(data.general.premium_whatsapp_texto || data.general.telefono_texto),
+    'ciudades-puntos': esc(ciudadesActivas(data).map((c) => c.nombre).join(' · ')),
+    'opciones-ciudad': ciudadesActivas(data).map((c) => `<option>${esc(c.nombre)}</option>`).join(''),
   };
   return html.replace(/\{\{sedes\.([\w-]+)\}\}/g, (m, k) => {
     if (!(k in marcas)) throw new Error(`Marca desconocida en index.html: ${m}`);

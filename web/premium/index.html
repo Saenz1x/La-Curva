@@ -13,8 +13,8 @@
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <!-- ===== CONFIGURACIÓN =====
      URL del webhook de n8n (nodo Webhook, método POST).
-     Mientras quede vacía, la solicitud se envía por WhatsApp a la línea general ({{sedes.telefono-texto}}). -->
-<script>window.N8N_WEBHOOK_URL = ""; window.LC_WHATSAPP = "{{sedes.telefono}}";</script>
+     Mientras quede vacía, la solicitud se envía por WhatsApp al número del programa Premium ({{sedes.premium-whatsapp-texto}}, campo premium_whatsapp de public/data/sedes.json). -->
+<script>window.N8N_WEBHOOK_URL = ""; window.LC_WHATSAPP = "{{sedes.premium-whatsapp}}";</script>
 <script type="module" src="./premium.js"></script>
 <style>
 :root{
@@ -193,7 +193,7 @@ header a{display:block}
         <div class="field"><label for="correo">Correo <span class="opt">(opcional)</span></label><input id="correo" name="correo" type="email" autocomplete="email"><span class="err"></span></div>
         <div class="row">
           <div class="field"><label for="tipo">Tipo de cliente</label><select id="tipo" name="tipo" required><option value="">Seleccione…</option><option>Carpintero</option><option>Contratista</option><option>Hogar</option><option>Empresa</option></select><span class="err"></span></div>
-          <div class="field"><label for="sede">Sede donde compra</label><select id="sede" name="sede" required><option value="">Seleccione…</option><option>Buenaventura</option><option>Cali</option><option>Bucaramanga</option><option>Armenia</option><option>Pereira</option><option>Roldanillo</option></select><span class="err"></span></div>
+          <div class="field"><label for="sede">Sede donde compra</label><select id="sede" name="sede" required><option value="">Seleccione…</option>{{sedes.opciones-ciudad}}</select><span class="err"></span></div>
         </div>
         <div class="field" role="group" aria-labelledby="intl"><span class="legend" id="intl">Productos de interés <span class="opt">(puede elegir varios)</span></span>
           <div class="chips">
@@ -222,7 +222,7 @@ header a{display:block}
 </section>
 </main>
 
-<footer><div class="wrap"><span>Estructura y PVC La Curva · Buenaventura · Cali · Bucaramanga · Armenia · Pereira · Roldanillo</span><span>Tarjeta personal e intransferible</span></div>
+<footer><div class="wrap"><span>Estructura y PVC La Curva · {{sedes.ciudades-puntos}}</span><span>Tarjeta personal e intransferible</span></div>
 <nav class="wrap legal" aria-label="Información legal"><a href="../politica-de-privacidad/">Tratamiento de datos</a><a href="../politica-de-cookies/">Cookies</a><a href="../terminos/#premium">Términos de la tarjeta</a><a href="../">pvclacurva.com</a></nav></footer>
 
 <script>
@@ -263,7 +263,7 @@ header a{display:block}
     var done=function(){document.getElementById('okname').textContent=data.nombre.split(' ')[0];f.classList.add('done');f.scrollIntoView({behavior:'smooth',block:'center'});};
     var url=window.N8N_WEBHOOK_URL;
     if(!url){
-      // Sin webhook: se abre WhatsApp con la solicitud lista para la línea general
+      // Sin webhook: se abre WhatsApp con la solicitud lista para el número del programa Premium
       var txt='Hola PVC La Curva, quiero solicitar la Tarjeta Cliente Premium.\n'+
         'Nombre: '+data.nombre+'\nCédula o NIT: '+data.documento+'\nWhatsApp: '+f.whatsapp.value.trim()+
         (data.correo?'\nCorreo: '+data.correo:'')+'\nTipo de cliente: '+data.tipo_cliente+'\nSede donde compro: '+data.sede+

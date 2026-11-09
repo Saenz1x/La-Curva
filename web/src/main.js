@@ -33,7 +33,7 @@ initPointer(opts);
 initFooter();
 initCookies();
 
-fetch('data/sedes.json')
+fetch(`data/sedes.json?v=${__SEDES_V__}`)
   .then((r) => r.json())
   .then((data) => {
     initWhatsapp(data);

@@ -1,9 +1,11 @@
 {
-  "_ayuda": "Toda la información de sedes de la página sale de este archivo (mapa, tarjetas, WhatsApp, calculadora, pie de página, contadores y datos para Google). Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos; si es una ciudad nueva, agrégala también en 'ciudades'. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. whatsapp_extra (opcional) = otros números de la misma sede. Correos: 'general.correo' es el correo nacional; cada ciudad tiene su 'correo' (null = se usa el nacional); una sede puede tener su propio 'correo' que reemplaza al de la ciudad. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia, Kennedy, El Cambio, El Pascual, Armenia y Cali. Pendientes (TODO coordenada exacta, hoy aproximada): Bucaramanga (barrio Ricaurte) y Pereira (Cra. 7 #30-57).",
+  "_ayuda": "Toda la información de sedes de la página sale de este archivo (mapa, tarjetas, WhatsApp, calculadora, pie de página, contadores y datos para Google). Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos; si es una ciudad nueva, agrégala también en 'ciudades'. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. whatsapp_extra (opcional) = otros números de la misma sede. premium_whatsapp = número que recibe las solicitudes de la Tarjeta Premium. Correos: 'general.correo' es el correo nacional; cada ciudad tiene su 'correo' (null = se usa el nacional); una sede puede tener su propio 'correo' que reemplaza al de la ciudad. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia, Kennedy, El Cambio, El Pascual, Armenia y Cali. Pendientes (TODO coordenada exacta, hoy aproximada): Bucaramanga (barrio Ricaurte) y Pereira (Cra. 7 #30-57).",
   "general": {
     "nombre": "PVC La Curva",
     "telefono": "573116009755",
     "telefono_texto": "311 600 9755",
+    "premium_whatsapp": "573124308996",
+    "premium_whatsapp_texto": "312 430 8996",
     "correo": "pvclacurva.co@gmail.com",
     "direccion": "Calle 5 No. 14-41, Barrio La Piña Madura, Buenaventura, Valle del Cauca",
     "instagram": "https://www.instagram.com/pvc_la_curva/",
@@ -46,7 +48,7 @@
     {
       "nombre": "Pereira",
       "departamento": "Risaralda",
-      "correo": null,
+      "correo": "pvclacurvapereira@gmail.com",
       "lat": 4.8133,
       "lng": -75.6961,
       "zoom": 13

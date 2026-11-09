@@ -79,7 +79,7 @@ Los contadores, textos de ciudades, preguntas frecuentes, pie de página y datos
 Página para clientes invitados: **https://pvclacurva.com/premium/**. No está enlazada desde el sitio, no aparece en el sitemap y tiene `noindex`, así que Google no la muestra. Ojo: cualquiera que tenga el enlace puede abrirla; la aprobación de cada solicitud la hace el equipo.
 
 - Para saber de dónde llegó cada cliente, comparte el enlace con `?utm_source=`, por ejemplo `pvclacurva.com/premium/?utm_source=cali-mostrador`. El valor llega en el campo `origen`.
-- **Envío de solicitudes:** mientras `window.N8N_WEBHOOK_URL` (al inicio de `premium/index.html`) esté vacío, el formulario abre WhatsApp con la solicitud lista para la línea general. Cuando el webhook de n8n esté listo, pega su URL ahí y las solicitudes llegarán por POST en JSON (`nombre`, `documento`, `whatsapp`, `correo`, `tipo_cliente`, `sede`, `intereses`, `autoriza_datos`, `fecha_registro`, `estado`, `origen`).
+- **Envío de solicitudes:** mientras `window.N8N_WEBHOOK_URL` (al inicio de `premium/index.html`) esté vacío, el formulario abre WhatsApp con la solicitud lista para el número del programa Premium (**312 430 8996**, campo `general.premium_whatsapp` de `sedes.json`). Cuando el webhook de n8n esté listo, pega su URL ahí y las solicitudes llegarán por POST en JSON (`nombre`, `documento`, `whatsapp`, `correo`, `tipo_cliente`, `sede`, `intereses`, `autoriza_datos`, `fecha_registro`, `estado`, `origen`).
 - La imagen de la tarjeta es `premium/tarjeta.webp`.
 
 ## Páginas legales
@@ -135,7 +135,7 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 1. ✔ Cali (Cl. 25 #8-30, 313 774 8009) y Armenia (Carrera 19 #11-61, 312 331 3726 y 310 753 9445): datos y ubicación listos.
 2. ✔ El Cambio (Cl. 1 #70-27) y El Pascual (Cl. 5 #10-04): dirección y ubicación listas.
    **Bucaramanga** (Cra. 17 #59-130, barrio Ricaurte, 310 378 7447): falta la ubicación exacta en Google Maps (hoy aproximada) y saber si tendrá correo propio (hoy usa el general).
-   **Pereira** (Cra. 7 #30-57, 316 659 6290): falta la ubicación exacta en Google Maps (hoy aproximada) y saber si tendrá correo propio (hoy usa el general).
+   **Pereira** (Cra. 7 #30-57, 316 659 6290, pvclacurvapereira@gmail.com): falta la ubicación exacta en Google Maps (hoy aproximada).
 3. ✔ Ubicación confirmada: Independencia (Cl. 6 #61-32), La Piña Madura (Calle 5 No. 14-41), María Eugenia (Cl. 6 #41B-56) , Kennedy (Calle 6) y Armenia (Carrera 19 #11-61). Falta el número exacto de la dirección de Kennedy.
 4. Horario de atención de cada sede (salvo María Eugenia).
 5. Horario de Independencia: Google Maps dice "cierra a las 5 a. m.", parece un error de la ficha.
@@ -146,7 +146,6 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 **Legal y Tarjeta Premium**
 - **NIT y razón social exacta** para la política de datos y los términos (hoy dicen «Estructura y PVC La Curva», sin NIT).
 - Revisar con el contador o abogado las condiciones de la Tarjeta Premium (`terminos/#premium`): beneficios, topes, vigencia del saldo.
-- Confirmar la sede de **Roldanillo** que aparece en el formulario Premium (no está en `sedes.json`).
 - URL del webhook de n8n para recibir las solicitudes Premium.
 
 **Productos**

@@ -742,13 +742,19 @@ input[type='range']::-moz-range-thumb { width: 18px; height: 18px; border-radius
 .wa-panel__head b { display: block; font: 700 1rem/1.25 var(--f-head); }
 .wa-panel__head span { display: block; margin-top: 2px; }
 .wa-panel__list { list-style: none; padding: 0; margin: 0; overflow-y: auto; display: grid; gap: 6px; }
-.wa-panel__group { font: 700 0.66rem/1 var(--f-head); letter-spacing: 0.2em; text-transform: uppercase; color: #ff4d45; margin: 8px 2px 2px; }
-.wa-panel__list a { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 12px 14px; border-radius: var(--r-sm); background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.07); transition: background 0.25s, border-color 0.25s; }
-.wa-panel__list a:hover { background: rgba(37, 211, 102, 0.14); border-color: rgba(37, 211, 102, 0.5); }
-.wa-panel__list b { font: 700 0.92rem/1.2 var(--f-head); display: block; }
-.wa-panel__list span { font-size: 0.8rem; color: var(--muted); }
-.wa-panel__list svg { width: 22px; height: 22px; color: var(--wa); flex: none; }
-.wa-panel__list .is-general { background: rgba(249, 0, 0, 0.12); border-color: rgba(249, 0, 0, 0.35); }
+.wa-panel__group { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 10px; margin: 10px 2px 0; }
+.wa-panel__group span { font: 700 0.66rem/1 var(--f-head); letter-spacing: 0.2em; text-transform: uppercase; color: #ff4d45; }
+.wa-panel__group a { font-size: 0.74rem; color: var(--muted); text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.2); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.wa-panel__group a:hover { color: #fff; }
+.wa-sede { display: grid; gap: 8px; padding: 12px 14px; border-radius: var(--r-sm); background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.07); }
+.wa-sede--general { background: rgba(249, 0, 0, 0.12); border-color: rgba(249, 0, 0, 0.35); }
+.wa-sede__info { display: grid; gap: 1px; min-width: 0; }
+.wa-sede__info b { font: 700 0.92rem/1.2 var(--f-head); }
+.wa-sede__info span { font-size: 0.8rem; color: var(--muted); }
+.wa-sede__nums { display: flex; flex-wrap: wrap; gap: 6px; }
+.wa-sede__nums a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px 7px 9px; border-radius: var(--r-pill); background: rgba(37, 211, 102, 0.1); border: 1px solid rgba(37, 211, 102, 0.35); font: 600 0.84rem/1 var(--f-head); white-space: nowrap; transition: background 0.25s, border-color 0.25s; }
+.wa-sede__nums a:hover, .wa-sede__nums a:focus-visible { background: rgba(37, 211, 102, 0.22); border-color: rgba(37, 211, 102, 0.7); }
+.wa-sede__nums svg { width: 18px; height: 18px; color: var(--wa); flex: none; }
 
 /* ---------- estado inicial de entradas (JS lo revela) ---------- */
 .js [data-reveal] { opacity: 0; transform: translateY(28px); }

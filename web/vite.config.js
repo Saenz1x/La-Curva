@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { renderDirectorio } from './src/directorio.js';
 import { sedesActivas, correoSede, ciudadDe } from './src/config.js';
 
@@ -55,6 +56,8 @@ const pagina = (ruta) => fileURLToPath(new URL(ruta, import.meta.url));
 
 export default defineConfig({
   base: './',
+  // Huella de sedes.json: cambia la URL del fetch en cada cambio de datos (GitHub Pages lo cachea 10 min)
+  define: { __SEDES_V__: JSON.stringify(createHash('sha1').update(readFileSync(new URL('./public/data/sedes.json', import.meta.url))).digest('hex').slice(0, 8)) },
   plugins: [sedesHtml(), preloadFuenteTitular()],
   build: {
     target: 'es2019',
