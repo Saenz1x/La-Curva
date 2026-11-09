@@ -56,7 +56,7 @@ Todo está en **`public/data/sedes.json`**. Para una sede nueva copia un objeto 
 - Cualquier dato que no tengas va en `null` y la página lo oculta.
 - `correo` (opcional): solo si la sede tiene un correo propio distinto al de su ciudad.
 - Una ciudad nueva se agrega en la lista `ciudades`: `nombre`, `departamento`, `correo` (o `null` para usar el general), centro del mapa (`lat`, `lng`) y `zoom`.
-- `general`: línea general, **correo nacional**, dirección de la sede principal y redes.
+- `general`: línea general, **correo nacional**, sede principal (`sede_principal`, hoy María Eugenia) con su dirección, y redes.
 
 Todo sale de este archivo, sin tocar código:
 

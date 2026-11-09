@@ -60,8 +60,9 @@ function footerSedes(data) {
 
 function footerContacto(data) {
   const g = data.general;
+  const principal = data.sedes.find((s) => s.id === g.sede_principal);
   return `
-          <li><svg><use href="#i-pin"/></svg><span><b>Sede principal</b><br />${esc(g.direccion)}</span></li>
+          <li><svg><use href="#i-pin"/></svg><span><b>Sede principal${principal ? ` · ${esc(principal.nombre)}` : ''}</b><br />${esc(g.direccion)}</span></li>
           <li><svg><use href="#i-phone"/></svg><span><b>Línea general</b><br /><a href="tel:+${g.telefono}">${esc(g.telefono_texto)}</a> · <a href="https://wa.me/${g.telefono}" target="_blank" rel="noopener">WhatsApp</a></span></li>
           <li><svg><use href="#i-mail"/></svg><span><b>Correo general</b><br />${mail(g.correo)}</span></li>
           <li><svg><use href="#i-truck"/></svg><span>Envíos a toda Colombia</span></li>`;
