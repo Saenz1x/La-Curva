@@ -135,17 +135,18 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 1. ✔ Cali (Cl. 25 #8-30, 313 774 8009) y Armenia (Carrera 19 #11-61, 312 331 3726 y 310 753 9445): datos y ubicación listos.
 2. ✔ El Cambio (Cl. 1 #70-27) y El Pascual (Cl. 5 #10-04): dirección y ubicación listas.
    **Bucaramanga** (Cra. 17 #59-130, barrio Ricaurte, 310 378 7447): falta la ubicación exacta en Google Maps (hoy aproximada) y saber si tendrá correo propio (hoy usa el general).
+   **Pereira** (Cra. 7 #30-57, 316 659 6290): falta la ubicación exacta en Google Maps (hoy aproximada) y saber si tendrá correo propio (hoy usa el general).
 3. ✔ Ubicación confirmada: Independencia (Cl. 6 #61-32), La Piña Madura (Calle 5 No. 14-41), María Eugenia (Cl. 6 #41B-56) , Kennedy (Calle 6) y Armenia (Carrera 19 #11-61). Falta el número exacto de la dirección de Kennedy.
 4. Horario de atención de cada sede (salvo María Eugenia).
 5. Horario de Independencia: Google Maps dice "cierra a las 5 a. m.", parece un error de la ficha.
 6. Tipo de venta por sede (detal / mayor / ambas).
-7. Fotos de fachada de El Cambio, Independencia, El Pascual, Cali, Armenia y Bucaramanga.
+7. Fotos de fachada de El Cambio, Independencia, El Pascual, Cali, Armenia, Bucaramanga y Pereira.
 8. Sugerencia: crear o reclamar la ficha de Google Maps de cada sede, para que todas salgan en el mapa.
 
 **Legal y Tarjeta Premium**
 - **NIT y razón social exacta** para la política de datos y los términos (hoy dicen «Estructura y PVC La Curva», sin NIT).
 - Revisar con el contador o abogado las condiciones de la Tarjeta Premium (`terminos/#premium`): beneficios, topes, vigencia del saldo.
-- Confirmar las sedes de **Pereira y Roldanillo** que aparecen en el formulario Premium (no están en `sedes.json`).
+- Confirmar la sede de **Roldanillo** que aparece en el formulario Premium (no está en `sedes.json`).
 - URL del webhook de n8n para recibir las solicitudes Premium.
 
 **Productos**

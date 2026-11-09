@@ -1,5 +1,5 @@
 {
-  "_ayuda": "Toda la información de sedes de la página sale de este archivo (mapa, tarjetas, WhatsApp, calculadora, pie de página, contadores y datos para Google). Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos; si es una ciudad nueva, agrégala también en 'ciudades'. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. whatsapp_extra (opcional) = otros números de la misma sede. Correos: 'general.correo' es el correo nacional; cada ciudad tiene su 'correo' (null = se usa el nacional); una sede puede tener su propio 'correo' que reemplaza al de la ciudad. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia, Kennedy, El Cambio, El Pascual, Armenia y Cali. Pendiente (TODO coordenada exacta): Bucaramanga (la actual es aproximada, barrio Ricaurte).",
+  "_ayuda": "Toda la información de sedes de la página sale de este archivo (mapa, tarjetas, WhatsApp, calculadora, pie de página, contadores y datos para Google). Para agregar una sede, copia un objeto de la lista 'sedes' y cambia sus datos; si es una ciudad nueva, agrégala también en 'ciudades'. Campos desconocidos van en null y la página los oculta. estado: 'activa' o 'próximamente'. tipo_venta: 'detal', 'mayor', 'ambas' o null. foto: ruta dentro de /img sin extensión, o null. whatsapp null = la página usa la línea general. whatsapp_extra (opcional) = otros números de la misma sede. Correos: 'general.correo' es el correo nacional; cada ciudad tiene su 'correo' (null = se usa el nacional); una sede puede tener su propio 'correo' que reemplaza al de la ciudad. Ubicaciones confirmadas en Google Maps por el equipo: Independencia, La Piña Madura, María Eugenia, Kennedy, El Cambio, El Pascual, Armenia y Cali. Pendientes (TODO coordenada exacta, hoy aproximada): Bucaramanga (barrio Ricaurte) y Pereira (Cra. 7 #30-57).",
   "general": {
     "nombre": "PVC La Curva",
     "telefono": "573116009755",
@@ -41,6 +41,14 @@
       "correo": null,
       "lat": 7.1193,
       "lng": -73.1227,
+      "zoom": 13
+    },
+    {
+      "nombre": "Pereira",
+      "departamento": "Risaralda",
+      "correo": null,
+      "lat": 4.8133,
+      "lng": -75.6961,
       "zoom": 13
     }
   ],
@@ -174,6 +182,20 @@
       "foto": null,
       "lat": 7.1003,
       "lng": -73.1262,
+      "estado": "activa"
+    },
+    {
+      "id": "pereira",
+      "ciudad": "Pereira",
+      "nombre": "Pereira",
+      "whatsapp": "573166596290",
+      "direccion": "Cra. 7 #30-57",
+      "horario": null,
+      "tipo_venta": null,
+      "productos": null,
+      "foto": null,
+      "lat": 4.8078,
+      "lng": -75.6995,
       "estado": "activa"
     }
   ]
