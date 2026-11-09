@@ -504,28 +504,44 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="wrap footer__grid">
+    <div class="wrap footer__top">
       <div class="footer__brand">
         <img src="img/logo-circulo.webp" width="96" height="93" alt="Logo Estructura y PVC La Curva" loading="lazy" />
         <p class="footer__slogan">PVC La Curva, innovamos tus espacios y transformamos tus ideas.</p>
         <p class="small muted">Su ferretería de primera.</p>
-      </div>
-      <div>
-        <h3 class="footer__h">Contacto</h3>
-        <ul class="footer__contact">{{sedes.contacto}}
-        </ul>
         <div class="footer__social">
           <a href="https://www.instagram.com/pvc_la_curva/" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
           <a href="https://www.facebook.com/PVCLaCurva" target="_blank" rel="noopener" aria-label="Facebook"><svg><use href="#i-fb"/></svg></a>
           <a href="https://www.youtube.com/channel/UCDmIGB7aMtKptVuHPY4croA" target="_blank" rel="noopener" aria-label="YouTube"><svg><use href="#i-yt"/></svg></a>
         </div>
       </div>
-      <div class="footer__dir">
-        <h3 class="footer__h">Sedes</h3>
-        <div class="footer__cities">{{sedes.footer}}
-        </div>
+      <div>
+        <h3 class="footer__h">Contacto</h3>
+        <ul class="footer__contact">{{sedes.contacto}}
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__h">Explora</h3>
+        <ul class="footer__links">
+          <li><a href="#sedes">Sedes y mapa</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#calculadora">Calculadora</a></li>
+          <li><a href="#instalacion">Guía de instalación</a></li>
+          <li><a href="#mayoristas">Mayoristas</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        </ul>
       </div>
     </div>
+
+    <div class="wrap footer__dir">
+      <div class="footer__dir-head">
+        <h3 class="footer__h">Nuestras sedes</h3>
+        <span>{{sedes.total}} sedes en {{sedes.ciudades}}</span>
+      </div>
+      <div class="footer__cities">{{sedes.footer}}
+      </div>
+    </div>
+
     <div class="wrap footer__bottom small muted">
       <span>© <span id="year">2026</span> PVC La Curva · {{sedes.ciudades}} · Fotos de referencia: Unsplash</span>
       <nav class="footer__legal" aria-label="Información legal">

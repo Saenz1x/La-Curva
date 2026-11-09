@@ -12,15 +12,13 @@ const telWa = (s, data) =>
 
 // Sedes activas agrupadas por ciudad, en el orden de sedes.json
 const porCiudad = (data) => ciudadesActivas(data).map((c) => ({ c, sedes: sedesActivas(data).filter((s) => s.ciudad === c.nombre) }));
-// Ciudades con muchas sedes ocupan una tarjeta ancha (lista a dos columnas)
-const ancha = (sedes) => (sedes.length > 3 ? ' is-wide' : '');
 
 /* ---------- preguntas frecuentes ---------- */
 function faqSedes(data) {
   const grupos = porCiudad(data);
   return `<p>Tenemos ${sedesActivas(data).length} sedes en ${enumerar(grupos.map((g) => g.c.nombre))}. Escríbele directo a la que te quede más cerca:</p>
             <div class="faq__dir">${grupos.map(({ c, sedes }) => `
-              <div class="faq__city${ancha(sedes)}">
+              <div class="faq__city">
                 <h4>${esc(c.nombre)} <span>${esc(c.departamento)}</span></h4>
                 <ul>${sedes.map((s) => `
                   <li><b>${esc(s.nombre)}</b><span>${s.direccion ? esc(s.direccion) : 'Dirección por confirmar'}</span><span>WhatsApp ${telWa(s, data)}</span></li>`).join('')}
@@ -44,13 +42,20 @@ function faqCorreos(data) {
 /* ---------- pie de página ---------- */
 function footerSedes(data) {
   return porCiudad(data).map(({ c, sedes }) => `
-          <div class="footer__city${ancha(sedes)}">
-            <h4>${esc(c.nombre)} <span>${esc(c.departamento)}</span></h4>
-            <p class="footer__mail"><svg><use href="#i-mail"/></svg>${mail(correoSede(sedes[0], data))}</p>
+          <section class="footer__city">
+            <header>
+              <h4>${esc(c.nombre)}</h4>
+              <span>${esc(c.departamento)} · ${sedes.length} ${sedes.length === 1 ? 'sede' : 'sedes'}</span>
+              <p class="footer__mail"><svg><use href="#i-mail"/></svg>${mail(correoSede(sedes[0], data))}</p>
+            </header>
             <ul>${sedes.map((s) => `
-              <li><a href="${esc(waSede(s, data.general))}" target="_blank" rel="noopener"><b>${esc(s.nombre)}</b><span>${s.direccion ? esc(s.direccion) : 'Dirección por confirmar'}</span><span class="footer__tel">${s.whatsapp ? numerosSede(s).map(fmtTel).join(' · ') : 'Por la línea general'}</span></a></li>`).join('')}
+              <li><a href="${esc(waSede(s, data.general))}" target="_blank" rel="noopener">
+                <b>${esc(s.nombre)}</b>
+                <span class="footer__tel"><svg><use href="#i-wa"/></svg>${s.whatsapp ? numerosSede(s).map(fmtTel).join(' · ') : 'Línea general'}</span>
+                <span class="footer__addr">${s.direccion ? esc(s.direccion) : 'Dirección por confirmar'}</span>
+              </a></li>`).join('')}
             </ul>
-          </div>`).join('');
+          </section>`).join('');
 }
 
 function footerContacto(data) {
