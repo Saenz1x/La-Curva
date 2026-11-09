@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { renderDirectorio } from './src/directorio.js';
 import { sedesActivas, correoSede, ciudadDe } from './src/config.js';
 
@@ -42,15 +43,30 @@ function preloadFuenteTitular() {
   return {
     name: 'preload-fuente-titular',
     transformIndexHtml(html, ctx) {
-      if (!ctx.bundle) return html;
+      if (!ctx.bundle || ctx.path !== '/index.html') return html;
       const f = Object.keys(ctx.bundle).find((k) => /montserrat-latin-800-normal.*\.woff2$/.test(k));
       return f ? html.replace('</head>', `  <link rel="preload" as="font" type="font/woff2" href="./${f}" crossorigin />\n</head>`) : html;
     },
   };
 }
 
+// Páginas del sitio. premium/ es solo para clientes invitados (noindex, fuera del sitemap).
+const pagina = (ruta) => fileURLToPath(new URL(ruta, import.meta.url));
+
 export default defineConfig({
   base: './',
   plugins: [sedesHtml(), preloadFuenteTitular()],
-  build: { target: 'es2019', assetsInlineLimit: 0 },
+  build: {
+    target: 'es2019',
+    assetsInlineLimit: 0,
+    rollupOptions: {
+      input: {
+        inicio: pagina('./index.html'),
+        premium: pagina('./premium/index.html'),
+        privacidad: pagina('./politica-de-privacidad/index.html'),
+        cookies: pagina('./politica-de-cookies/index.html'),
+        terminos: pagina('./terminos/index.html'),
+      },
+    },
+  },
 });

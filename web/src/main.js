@@ -10,6 +10,7 @@ import { initSedes } from './modules/sedes.js';
 import { initProductos } from './modules/productos.js';
 import { initHumedad } from './modules/humedad.js';
 import { initCalculadora } from './modules/calculadora.js';
+import { initCookies } from './cookies.js';
 import {
   initNav, initHero, initMotion, initPointer, initInstalacion, initAntesDespues, initComparativo,
   initReels, initFooter, initMayoristas,
@@ -30,6 +31,7 @@ initComparativo();
 initReels();
 initPointer(opts);
 initFooter();
+initCookies();
 
 fetch('data/sedes.json')
   .then((r) => r.json())

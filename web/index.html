@@ -210,6 +210,12 @@
             <ul class="gmap__list" id="gmap-list"></ul>
             <div class="gmap__frame">
               <iframe id="gmap-frame" title="Mapa de sedes de PVC La Curva en Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+              <div class="gmap__consent" id="gmap-consent" hidden>
+                <svg><use href="#i-pin"/></svg>
+                <p>El mapa es de Google Maps, que puede usar sus propias cookies.</p>
+                <button class="btn btn--white btn--sm" type="button">Ver el mapa</button>
+                <a class="link small" href="politica-de-cookies/">Política de cookies</a>
+              </div>
               <a class="gmap__open btn btn--white btn--sm" id="gmap-open" href="#" target="_blank" rel="noopener"><svg><use href="#i-route"/></svg> Cómo llegar</a>
             </div>
           </div>
@@ -426,7 +432,7 @@
           <label class="field"><span>Ciudad</span><input name="ciudad" autocomplete="address-level2" required /></label>
           <label class="field"><span>¿Qué necesitas?</span><textarea name="detalle" rows="3" placeholder="Ej.: 500 m² de cielo raso para una obra" required></textarea></label>
           <button class="btn btn--red btn--block" type="submit"><svg><use href="#i-wa"/></svg> Enviar por WhatsApp</button>
-          <p class="small muted">Se abre WhatsApp con tu mensaje listo para la línea general. También puedes escribirnos a <a class="link" href="mailto:{{sedes.correo}}">{{sedes.correo}}</a>.</p>
+          <p class="small muted">Al enviar aceptas nuestra <a class="link" href="politica-de-privacidad/">política de tratamiento de datos</a>. Se abre WhatsApp con tu mensaje listo para la línea general. También puedes escribirnos a <a class="link" href="mailto:{{sedes.correo}}">{{sedes.correo}}</a>.</p>
         </form>
       </div>
     </section>
@@ -522,6 +528,12 @@
     </div>
     <div class="wrap footer__bottom small muted">
       <span>© <span id="year">2026</span> PVC La Curva · {{sedes.ciudades}} · Fotos de referencia: Unsplash</span>
+      <nav class="footer__legal" aria-label="Información legal">
+        <a href="politica-de-privacidad/">Tratamiento de datos</a>
+        <a href="politica-de-cookies/">Cookies</a>
+        <button type="button" data-cookies-abrir>Preferencias de cookies</button>
+        <a href="terminos/">Términos y condiciones</a>
+      </nav>
       <a class="footer__credit" href="https://www.instagram.com/saenzdeluxe/" target="_blank" rel="noopener">Hecho por <b>@saenzdeluxe</b></a>
     </div>
   </footer>

@@ -62,7 +62,7 @@ function footerContacto(data) {
           <li><svg><use href="#i-truck"/></svg><span>Envíos a toda Colombia</span></li>`;
 }
 
-// Reemplaza las marcas {{sedes.*}} de index.html
+// Reemplaza las marcas {{sedes.*}} de las páginas (index.html, premium y páginas legales)
 export function renderDirectorio(html, data) {
   const marcas = {
     total: String(sedesActivas(data).length),
@@ -72,6 +72,9 @@ export function renderDirectorio(html, data) {
     footer: footerSedes(data),
     contacto: footerContacto(data),
     correo: esc(data.general.correo),
+    telefono: esc(data.general.telefono),
+    'telefono-texto': esc(data.general.telefono_texto),
+    direccion: esc(data.general.direccion),
   };
   return html.replace(/\{\{sedes\.([\w-]+)\}\}/g, (m, k) => {
     if (!(k in marcas)) throw new Error(`Marca desconocida en index.html: ${m}`);

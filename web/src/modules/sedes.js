@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import { mapasPermitidos, aceptarTodas, onConsent } from '../cookies.js';
 import { waLink, msgSede, waSede, fmtTel, numerosSede, mapaSede, mapaCiudad, comoLlegar, correoSede, ciudadDe } from '../config.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -328,13 +329,24 @@ export function initSedes(data, opts = {}) {
   }, { threshold: 0.35 });
   io.observe($('.constellation'));
 
-  // Carga Google Maps solo cuando el mapa se acerca
-  const io2 = new IntersectionObserver((ents) => {
-    if (!ents.some((e) => e.isIntersecting)) return;
-    io2.disconnect();
+  // Carga Google Maps solo cuando el mapa se acerca y la persona aceptó sus cookies
+  let cerca = false;
+  const cargarMapa = () => {
+    const aviso = $('#gmap-consent');
+    aviso.hidden = mapasPermitidos();
+    if (!cerca || !mapasPermitidos() || mapaListo) return;
     mapaListo = true;
     const f = $('#gmap-frame');
     if (f.dataset.src) f.src = f.dataset.src;
+  };
+  $('#gmap-consent button').addEventListener('click', aceptarTodas);
+  onConsent(cargarMapa);
+  cargarMapa();
+  const io2 = new IntersectionObserver((ents) => {
+    if (!ents.some((e) => e.isIntersecting)) return;
+    io2.disconnect();
+    cerca = true;
+    cargarMapa();
   }, { rootMargin: '500px' });
   io2.observe($('#mapa'));
 }

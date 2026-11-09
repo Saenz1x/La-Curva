@@ -74,6 +74,24 @@ Todo sale de este archivo, sin tocar código:
 
 Los contadores, textos de ciudades, preguntas frecuentes, pie de página y datos estructurados se escriben en el HTML al hacer `npm run build` (`src/directorio.js` y `vite.config.js`), así Google los lee sin JavaScript. En `index.html` aparecen como marcas `{{sedes.…}}`.
 
+## Tarjeta Cliente Premium (`premium/`)
+
+Página para clientes invitados: **https://pvclacurva.com/premium/**. No está enlazada desde el sitio, no aparece en el sitemap y tiene `noindex`, así que Google no la muestra. Ojo: cualquiera que tenga el enlace puede abrirla; la aprobación de cada solicitud la hace el equipo.
+
+- Para saber de dónde llegó cada cliente, comparte el enlace con `?utm_source=`, por ejemplo `pvclacurva.com/premium/?utm_source=cali-mostrador`. El valor llega en el campo `origen`.
+- **Envío de solicitudes:** mientras `window.N8N_WEBHOOK_URL` (al inicio de `premium/index.html`) esté vacío, el formulario abre WhatsApp con la solicitud lista para la línea general. Cuando el webhook de n8n esté listo, pega su URL ahí y las solicitudes llegarán por POST en JSON (`nombre`, `documento`, `whatsapp`, `correo`, `tipo_cliente`, `sede`, `intereses`, `autoriza_datos`, `fecha_registro`, `estado`, `origen`).
+- La imagen de la tarjeta es `premium/tarjeta.webp`.
+
+## Páginas legales
+
+- `politica-de-privacidad/`: tratamiento de datos personales (Ley 1581 de 2012).
+- `politica-de-cookies/`: qué guarda el sitio y cómo cambiar la elección.
+- `terminos/`: términos del sitio y, en `#premium`, las condiciones de la Tarjeta Premium.
+
+El correo, el teléfono y la dirección salen de `sedes.json` (marcas `{{sedes.correo}}`, `{{sedes.telefono-texto}}`, `{{sedes.direccion}}`). Al cambiar algo importante, actualiza la fecha de vigencia de cada página.
+
+**Cookies:** el sitio no usa cookies propias ni analítica. El aviso (`src/cookies.js`) solo pregunta por el mapa de Google Maps, que no se carga hasta que la persona acepta. La elección se guarda en el navegador (`localStorage`, clave `lc-cookies`). Si algún día se agrega analítica (Google Analytics, píxel de Meta…), hay que cargarla también solo con consentimiento y sumarla a la política.
+
 ## Otras cosas editables
 
 - `src/config.js`: medidas de cada producto para la calculadora, % de desperdicio y cómo se arman los enlaces de WhatsApp y Google Maps.
@@ -123,6 +141,12 @@ Rendimiento 92–93 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
 6. Tipo de venta por sede (detal / mayor / ambas).
 7. Fotos de fachada de El Cambio, Independencia, El Pascual, Cali, Armenia y Bucaramanga.
 8. Sugerencia: crear o reclamar la ficha de Google Maps de cada sede, para que todas salgan en el mapa.
+
+**Legal y Tarjeta Premium**
+- **NIT y razón social exacta** para la política de datos y los términos (hoy dicen «Estructura y PVC La Curva», sin NIT).
+- Revisar con el contador o abogado las condiciones de la Tarjeta Premium (`terminos/#premium`): beneficios, topes, vigencia del saldo.
+- Confirmar las sedes de **Pereira y Roldanillo** que aparecen en el formulario Premium (no están en `sedes.json`).
+- URL del webhook de n8n para recibir las solicitudes Premium.
 
 **Productos**
 9. Medidas reales de cada pieza para la calculadora (`src/config.js`): lámina de cielo raso (hoy 0,25 × 5,95 m), panel 3D (0,50 × 0,50 m), m² por caja de piso SPC (2,2 m²), lámina marmolizada y lámina PVC (1,22 × 2,44 m), rollo de adhesivo (0,45 × 10 m).
