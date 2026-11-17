@@ -1,7 +1,10 @@
 // Invitación a la fiesta de Navidad: fuentes, cuenta regresiva, nieve, calendario y confirmación por correo
 import '@fontsource/montserrat/latin-600.css';
-import '@fontsource/montserrat/latin-800.css';
-import '@fontsource/montserrat/latin-900-italic.css';
+import '@fontsource/montserrat/latin-700.css';
+import '@fontsource/playfair-display/latin-500.css';
+import '@fontsource/playfair-display/latin-600.css';
+import '@fontsource/playfair-display/latin-500-italic.css';
+import '@fontsource/playfair-display/latin-600-italic.css';
 import '@fontsource/inter/latin-400.css';
 import '@fontsource/inter/latin-600.css';
 import './invitacion.css';
@@ -61,19 +64,19 @@ function nieve() {
   const crear = () => {
     w = c.width = innerWidth * devicePixelRatio;
     h = c.height = innerHeight * devicePixelRatio;
-    copos = Array.from({ length: Math.min(90, Math.round(innerWidth / 12)) }, () => ({
-      x: Math.random() * w, y: Math.random() * h, r: (Math.random() * 1.8 + 0.6) * devicePixelRatio,
-      v: (Math.random() * 0.5 + 0.3) * devicePixelRatio, o: Math.random() * Math.PI * 2,
+    copos = Array.from({ length: Math.min(60, Math.round(innerWidth / 18)) }, () => ({
+      x: Math.random() * w, y: Math.random() * h, r: (Math.random() * 1.4 + 0.5) * devicePixelRatio, a: Math.random() * 0.5 + 0.25,
+      v: (Math.random() * 0.35 + 0.2) * devicePixelRatio, o: Math.random() * Math.PI * 2,
     }));
   };
   crear();
   addEventListener('resize', crear);
   (function paso() {
     ctx.clearRect(0, 0, w, h);
-    ctx.fillStyle = 'rgba(255,255,255,0.8)';
     for (const p of copos) {
       p.y += p.v; p.o += 0.01; p.x += Math.sin(p.o) * 0.3 * devicePixelRatio;
       if (p.y > h) { p.y = -5; p.x = Math.random() * w; }
+      ctx.fillStyle = `rgba(255,248,235,${p.a})`;
       ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
     }
     requestAnimationFrame(paso);
@@ -98,7 +101,6 @@ function validar() {
   let ok = true;
   ok = error(f.nombre, f.nombre.value.trim().split(/\s+/).length < 2 ? 'Escribe tu nombre y apellido.' : '') && ok;
   ok = error(f.celular, /^3\d{9}$/.test(digitos(f.celular.value)) ? '' : 'Escribe un celular de 10 dígitos que empiece por 3.') && ok;
-  ok = error(f.sede, f.sede.value ? '' : 'Elige tu sede o área.') && ok;
   ok = error(f.querySelector('[name=asistencia]'), f.asistencia.value ? '' : 'Cuéntanos si vas a asistir.') && ok;
   return ok;
 }
@@ -108,12 +110,11 @@ f.addEventListener('submit', async (e) => {
   e.preventDefault();
   msg.textContent = '';
   if (f._honey.value) return; // bot
-  if (!validar()) { f.querySelector('.mal input, .mal select')?.focus(); return; }
+  if (!validar()) { f.querySelector('.mal input')?.focus(); return; }
   const va = f.asistencia.value === 'Sí';
   const datos = {
     'Nombre': f.nombre.value.trim(),
     'Celular': digitos(f.celular.value),
-    'Sede o área': f.sede.value,
     '¿Asistirá?': f.asistencia.value,
     'Comentario': f.comentario.value.trim() || '—',
     'Fecha de respuesta': new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' }),
@@ -133,13 +134,13 @@ f.addEventListener('submit', async (e) => {
     if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || r.status);
     $('#ok-nombre').textContent = datos.Nombre.split(' ')[0];
     $('#ok-texto').textContent = va
-      ? 'Te esperamos el domingo 6 de diciembre a las 4:00 p. m. en el Salón Caramelo. ¡Va a ser una gran tarde!'
+      ? 'Te esperamos el domingo 6 de diciembre a las 4:00 p. m. en el Salón de eventos Caramelo.'
       : 'Gracias por avisarnos. Te vamos a extrañar; ¡felices fiestas!';
     f.classList.add('listo');
     f.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
   } catch {
     btn.disabled = false;
-    btn.textContent = 'Confirmar';
+    btn.textContent = 'Enviar confirmación';
     const cuerpo = Object.entries(datos).filter(([k]) => !k.startsWith('_')).map(([k, v]) => `${k}: ${v}`).join('\n');
     msg.innerHTML = `No pudimos enviar tu respuesta. Intenta de nuevo o <a href="mailto:${CORREO}?subject=${encodeURIComponent(datos._subject)}&body=${encodeURIComponent(cuerpo)}">envíala por correo</a>.`;
   }

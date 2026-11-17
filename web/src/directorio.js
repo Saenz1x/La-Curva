@@ -84,7 +84,6 @@ export function renderDirectorio(html, data) {
     'premium-whatsapp': esc(data.general.premium_whatsapp || data.general.telefono),
     'premium-whatsapp-texto': esc(data.general.premium_whatsapp_texto || data.general.telefono_texto),
     'ciudades-puntos': esc(ciudadesActivas(data).map((c) => c.nombre).join(' · ')),
-    'opciones-sede': porCiudad(data).map(({ c, sedes }) => `<optgroup label="${esc(c.nombre)}">${sedes.map((s) => `<option>${esc(s.nombre === c.nombre ? `Sede ${s.nombre}` : `${s.nombre} (${c.nombre})`)}</option>`).join('')}</optgroup>`).join(''),
     'opciones-ciudad': ciudadesActivas(data).map((c) => `<option>${esc(c.nombre)}</option>`).join(''),
   };
   return html.replace(/\{\{sedes\.([\w-]+)\}\}/g, (m, k) => {
