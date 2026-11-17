@@ -1,4 +1,4 @@
-// Invitación a la fiesta de Navidad: fuentes, cuenta regresiva, nieve, calendario y confirmación por correo
+// Invitación a la fiesta de fin de año: fuentes, cuenta regresiva, nieve, calendario y confirmación por correo
 import '@fontsource/montserrat/latin-600.css';
 import '@fontsource/montserrat/latin-700.css';
 import '@fontsource/playfair-display/latin-500.css';
@@ -11,7 +11,7 @@ import './invitacion.css';
 
 // ===== Datos del evento =====
 const EVENTO = {
-  titulo: 'Fiesta de Navidad PVC La Curva',
+  titulo: 'Fiesta de fin de año PVC La Curva',
   inicio: '2026-12-06T16:00:00-05:00', // hora de Colombia
   horas: 4, // duración estimada, solo para el calendario
   lugar: 'Salón de eventos Caramelo, Calle 5 #14-55, sector Isla, Buenaventura',
@@ -50,11 +50,11 @@ const utc = (dt) => dt.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
 $('#cal-google').href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(EVENTO.titulo)}&dates=${utc(inicio)}/${utc(fin)}&location=${encodeURIComponent(EVENTO.lugar)}&ctz=America/Bogota`;
 $('#cal-ics').addEventListener('click', () => {
   const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PVC La Curva//Invitacion//ES', 'BEGIN:VEVENT',
-    `UID:navidad-2026@pvclacurva.com`, `DTSTAMP:${utc(new Date())}`, `DTSTART:${utc(inicio)}`, `DTEND:${utc(fin)}`,
+    `UID:fin-de-ano-2026@pvclacurva.com`, `DTSTAMP:${utc(new Date())}`, `DTSTART:${utc(inicio)}`, `DTEND:${utc(fin)}`,
     `SUMMARY:${EVENTO.titulo}`, `LOCATION:${EVENTO.lugar.replace(/,/g, '\\,')}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
-  a.download = 'fiesta-navidad-pvc-la-curva.ics';
+  a.download = 'fiesta-fin-de-ano-pvc-la-curva.ics';
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 });
@@ -121,7 +121,7 @@ f.addEventListener('submit', async (e) => {
     '¿Asistirá?': f.asistencia.value,
     'Comentario': f.comentario.value.trim() || '—',
     'Fecha de respuesta': new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' }),
-    _subject: `Fiesta de Navidad · ${va ? 'Confirma' : 'No asiste'}: ${f.nombre.value.trim()}`,
+    _subject: `Fiesta de fin de año · ${va ? 'Confirma' : 'No asiste'}: ${f.nombre.value.trim()}`,
     _template: 'table',
     _captcha: 'false',
   };

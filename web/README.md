@@ -82,7 +82,7 @@ Página para clientes invitados: **https://pvclacurva.com/premium/**. No está e
 - **Envío de solicitudes:** mientras `window.N8N_WEBHOOK_URL` (al inicio de `premium/index.html`) esté vacío, el formulario abre WhatsApp con la solicitud lista para el número del programa Premium (campo `general.premium_whatsapp` de `sedes.json`). Cuando el webhook de n8n esté listo, pega su URL ahí y las solicitudes llegarán por POST en JSON (`nombre`, `documento`, `whatsapp`, `correo`, `tipo_cliente`, `sede`, `intereses`, `autoriza_datos`, `fecha_registro`, `estado`, `origen`).
 - La imagen de la tarjeta es `premium/tarjeta.webp`.
 
-## Invitación a la fiesta de Navidad (`invitacion/`)
+## Invitación a la fiesta de fin de año (`invitacion/`)
 
 Página privada en **https://pvclacurva.com/invitacion/** (noindex, fuera del sitemap y sin enlaces desde el sitio). Los datos del evento (título, fecha, hora y lugar) están al inicio de `invitacion/invitacion.js` y en el texto de `invitacion/index.html`.
 
