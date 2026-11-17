@@ -86,9 +86,9 @@ Página para clientes invitados: **https://pvclacurva.com/premium/**. No está e
 
 Página privada en **https://pvclacurva.com/invitacion/** (noindex, fuera del sitemap y sin enlaces desde el sitio). Los datos del evento (título, fecha, hora y lugar) están al inicio de `invitacion/invitacion.js` y en el texto de `invitacion/index.html`.
 
-- Las confirmaciones llegan al correo definido en `CORREO` (`invitacion/invitacion.js`) a través de [FormSubmit](https://formsubmit.co), sin servidor propio.
+- Las confirmaciones llegan por [FormSubmit](https://formsubmit.co), sin servidor propio, al correo asociado a `FORM_ID` en `invitacion/invitacion.js` (código que FormSubmit entrega al activar el correo).
 - La **primera** confirmación que se envíe hace que FormSubmit mande a ese correo un mensaje «Activate Form»: hay que abrirlo y activar. Desde ahí, cada confirmación llega como un correo con una tabla (nombre, celular, sede, si asiste y comentario).
-- Si se cambia el correo, hay que volver a activarlo de la misma forma.
+- Para cambiar el correo: poner la dirección nueva en `FORM_ID`, enviar una confirmación, activar desde el correo de FormSubmit y reemplazar la dirección por el código que indica ese correo. Actualizar también `CORREO`, que se usa en el enlace de respaldo.
 
 ## Páginas legales
 

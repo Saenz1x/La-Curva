@@ -16,9 +16,12 @@ const EVENTO = {
   horas: 4, // duración estimada, solo para el calendario
   lugar: 'Salón de eventos Caramelo, Calle 5 #14-55, sector Isla, Buenaventura',
 };
-// Las confirmaciones llegan a este correo por FormSubmit (formsubmit.co).
-// La primera vez, FormSubmit envía a este correo un mensaje para activar el formulario.
-const CORREO = 'pvclacurva.co@gmail.com';
+// Las confirmaciones llegan a pvclacurva.co@gmail.com por FormSubmit (formsubmit.co).
+// FORM_ID es el código que FormSubmit dio al activar ese correo: así la dirección no queda a la vista en la página.
+// Para cambiar de correo, pon aquí la dirección nueva, activa el formulario desde el correo que llega
+// y reemplázala por el código nuevo que FormSubmit indica.
+const FORM_ID = 'a38fc376bd78c7d4d4b60800c04c4b62';
+const CORREO = 'pvclacurva.co@gmail.com'; // solo para el enlace de respaldo cuando falla el envío
 
 const $ = (s) => document.querySelector(s);
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -125,7 +128,7 @@ f.addEventListener('submit', async (e) => {
   btn.disabled = true;
   btn.textContent = 'Enviando…';
   try {
-    const r = await fetch(`https://formsubmit.co/ajax/${CORREO}`, {
+    const r = await fetch(`https://formsubmit.co/ajax/${FORM_ID}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(datos),
