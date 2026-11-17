@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fiesta de Navidad | PVC La Curva</title>
+  <meta name="description" content="Estás invitado a la fiesta de Navidad de PVC La Curva: domingo 6 de diciembre, 4:00 p. m., Salón de eventos Caramelo, Buenaventura." />
+  <!-- Invitación privada: no aparece en Google ni en el menú del sitio -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#120707" />
+  <meta property="og:title" content="¡Estás invitado a nuestra fiesta de Navidad!" />
+  <meta property="og:description" content="Domingo 6 de diciembre · 4:00 p. m. · Salón de eventos Caramelo, Buenaventura. Confirma tu asistencia." />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <script type="module" src="./invitacion.js"></script>
+</head>
+<body>
+  <canvas id="nieve" aria-hidden="true"></canvas>
+
+  <!-- Adornos colgando -->
+  <div class="adornos" aria-hidden="true">
+    <span style="--x: 8%; --l: 70px; --c: var(--rojo); --d: 0s"></span>
+    <span style="--x: 22%; --l: 120px; --c: var(--oro); --d: -1.2s"></span>
+    <span style="--x: 78%; --l: 100px; --c: var(--verde); --d: -0.6s"></span>
+    <span style="--x: 92%; --l: 60px; --c: var(--rojo); --d: -2s"></span>
+  </div>
+
+  <main>
+    <section class="hero">
+      <img class="logo" src="../img/logo-circulo.webp" width="120" height="116" alt="PVC La Curva" />
+      <p class="kicker">Estás invitado</p>
+      <h1>Nuestra fiesta de <em>Navidad</em></h1>
+      <p class="lead">Este año lo construimos juntos. Queremos cerrarlo celebrando con todo el equipo de PVC La Curva: comida, música, sorpresas y una tarde para compartir.</p>
+
+      <div class="cuenta" id="cuenta" aria-label="Tiempo que falta para la fiesta">
+        <div><b data-u="d">--</b><span>días</span></div>
+        <div><b data-u="h">--</b><span>horas</span></div>
+        <div><b data-u="m">--</b><span>min</span></div>
+        <div><b data-u="s">--</b><span>seg</span></div>
+      </div>
+      <a class="btn btn--oro" href="#confirmar">Confirmar asistencia</a>
+    </section>
+
+    <section class="datos" aria-label="Detalles del evento">
+      <div class="dato">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" /><path d="M3.5 10h17M8 3v4M16 3v4" /></svg>
+        <span>Fecha</span><b>Domingo 6 de diciembre</b>
+      </div>
+      <div class="dato">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></svg>
+        <span>Hora</span><b>4:00 p. m.</b>
+      </div>
+      <div class="dato dato--lugar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" /><circle cx="12" cy="9.5" r="2.6" /></svg>
+        <span>Lugar</span><b>Salón de eventos Caramelo</b>
+        <p>Calle 5 #14-55, sector Isla<br />Buenaventura</p>
+      </div>
+      <div class="acciones">
+        <a class="btn btn--linea" href="https://www.google.com/maps/search/?api=1&query=Calle%205%20%2314-55%2C%20Buenaventura%2C%20Valle%20del%20Cauca" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn--linea" id="cal-google" href="#" target="_blank" rel="noopener">Agregar a Google Calendar</a>
+        <button class="btn btn--linea" id="cal-ics" type="button">Descargar al calendario</button>
+      </div>
+    </section>
+
+    <section class="rsvp-sec" id="confirmar">
+      <form class="rsvp" id="rsvp" novalidate>
+        <div class="rsvp__campos">
+          <h2>Confirma tu asistencia</h2>
+          <p class="rsvp__intro">Ayúdanos a preparar todo. Responde aunque no puedas ir.</p>
+
+          <div class="campo"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" autocomplete="name" required /><span class="err"></span></div>
+          <div class="fila">
+            <div class="campo"><label for="celular">Celular</label><input id="celular" name="celular" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="300 123 4567" required /><span class="err"></span></div>
+            <div class="campo"><label for="sede">Sede o área</label>
+              <select id="sede" name="sede" required>
+                <option value="">Elige…</option>
+                {{sedes.opciones-sede}}
+                <optgroup label="Otras"><option>Oficina / administración</option><option>Otra</option></optgroup>
+              </select><span class="err"></span></div>
+          </div>
+          <div class="campo" role="radiogroup" aria-labelledby="asis-l"><span class="etq" id="asis-l">¿Vas a asistir?</span>
+            <div class="opciones">
+              <label class="opcion"><input type="radio" name="asistencia" value="Sí" required /><span>¡Sí, allá estaré!</span></label>
+              <label class="opcion"><input type="radio" name="asistencia" value="No" /><span>No podré ir</span></label>
+            </div><span class="err"></span></div>
+          <div class="campo"><label for="comentario">Comentario <span class="opc">(opcional)</span></label><textarea id="comentario" name="comentario" rows="3" placeholder="Ej.: no como carne, llego un poco tarde…"></textarea><span class="err"></span></div>
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn--oro btn--full" type="submit">Confirmar</button>
+          <p class="msg" id="rsvp-msg" role="status" aria-live="polite"></p>
+          <p class="nota">Tu respuesta llega al área de Gestión Humana. Tratamos tus datos según nuestra <a href="../politica-de-privacidad/" target="_blank" rel="noopener">política de datos</a>.</p>
+        </div>
+        <div class="rsvp__ok" role="status" aria-live="polite">
+          <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></div>
+          <h2>¡Gracias, <span id="ok-nombre">compañero</span>!</h2>
+          <p id="ok-texto"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span>PVC La Curva · Felices fiestas</span>
+    <a href="../">pvclacurva.com</a>
+  </footer>
+</body>
+</html>

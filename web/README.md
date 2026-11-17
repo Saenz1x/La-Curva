@@ -82,6 +82,14 @@ Página para clientes invitados: **https://pvclacurva.com/premium/**. No está e
 - **Envío de solicitudes:** mientras `window.N8N_WEBHOOK_URL` (al inicio de `premium/index.html`) esté vacío, el formulario abre WhatsApp con la solicitud lista para el número del programa Premium (campo `general.premium_whatsapp` de `sedes.json`). Cuando el webhook de n8n esté listo, pega su URL ahí y las solicitudes llegarán por POST en JSON (`nombre`, `documento`, `whatsapp`, `correo`, `tipo_cliente`, `sede`, `intereses`, `autoriza_datos`, `fecha_registro`, `estado`, `origen`).
 - La imagen de la tarjeta es `premium/tarjeta.webp`.
 
+## Invitación a la fiesta de Navidad (`invitacion/`)
+
+Página privada en **https://pvclacurva.com/invitacion/** (noindex, fuera del sitemap y sin enlaces desde el sitio). Los datos del evento (título, fecha, hora y lugar) están al inicio de `invitacion/invitacion.js` y en el texto de `invitacion/index.html`.
+
+- Las confirmaciones llegan al correo definido en `CORREO` (`invitacion/invitacion.js`) a través de [FormSubmit](https://formsubmit.co), sin servidor propio.
+- La **primera** confirmación que se envíe hace que FormSubmit mande a ese correo un mensaje «Activate Form»: hay que abrirlo y activar. Desde ahí, cada confirmación llega como un correo con una tabla (nombre, celular, sede, si asiste y comentario).
+- Si se cambia el correo, hay que volver a activarlo de la misma forma.
+
 ## Páginas legales
 
 - `politica-de-privacidad/`: tratamiento de datos personales (Ley 1581 de 2012).

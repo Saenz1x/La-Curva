@@ -51,7 +51,7 @@ function preloadFuenteTitular() {
   };
 }
 
-// Páginas del sitio. premium/ es solo para clientes invitados (noindex, fuera del sitemap).
+// Páginas del sitio. premium/ e invitacion/ son privadas (noindex, fuera del sitemap).
 const pagina = (ruta) => fileURLToPath(new URL(ruta, import.meta.url));
 
 export default defineConfig({
@@ -66,6 +66,7 @@ export default defineConfig({
       input: {
         inicio: pagina('./index.html'),
         premium: pagina('./premium/index.html'),
+        invitacion: pagina('./invitacion/index.html'),
         privacidad: pagina('./politica-de-privacidad/index.html'),
         cookies: pagina('./politica-de-cookies/index.html'),
         terminos: pagina('./terminos/index.html'),
