@@ -16,12 +16,12 @@ const EVENTO = {
   horas: 4, // duración estimada, solo para el calendario
   lugar: 'Salón de eventos Caramelo, Calle 5 #14-55, sector Isla, Buenaventura',
 };
-// Las confirmaciones llegan a pvclacurva.co@gmail.com por FormSubmit (formsubmit.co).
-// FORM_ID es el código que FormSubmit dio al activar ese correo: así la dirección no queda a la vista en la página.
+// Las confirmaciones llegan a gestionhumanapvclacurva@gmail.com por FormSubmit (formsubmit.co).
+// FORM_ID es el correo o, mejor, el código que FormSubmit da al activarlo (así la dirección no queda a la vista).
 // Para cambiar de correo, pon aquí la dirección nueva, activa el formulario desde el correo que llega
 // y reemplázala por el código nuevo que FormSubmit indica.
-const FORM_ID = 'a38fc376bd78c7d4d4b60800c04c4b62';
-const CORREO = 'pvclacurva.co@gmail.com'; // solo para el enlace de respaldo cuando falla el envío
+const FORM_ID = 'gestionhumanapvclacurva@gmail.com';
+const CORREO = 'gestionhumanapvclacurva@gmail.com'; // solo para el enlace de respaldo cuando falla el envío
 
 const $ = (s) => document.querySelector(s);
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
