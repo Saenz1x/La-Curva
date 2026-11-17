@@ -17,32 +17,35 @@
 <body>
   <canvas id="nieve" aria-hidden="true"></canvas>
 
-  <!-- Ramas de pino en las esquinas -->
-  <svg class="rama rama--izq" viewBox="0 0 260 200" aria-hidden="true"><use href="#rama" /></svg>
-  <svg class="rama rama--der" viewBox="0 0 260 200" aria-hidden="true"><use href="#rama" /></svg>
+  <!-- Esferas navideñas colgando -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
-      <g id="rama" fill="none" stroke-linecap="round">
-        <path d="M0 18 C70 30 130 60 205 120" stroke="#5b3a1f" stroke-width="3" />
-        <g stroke="#1f6b45" stroke-width="2.2">
-          <path d="M30 22 l-8 -16 M30 22 l-4 18 M55 28 l-6 -18 M55 28 l-2 20 M80 37 l-4 -19 M80 37 l0 21 M105 48 l-2 -19 M105 48 l3 20 M130 61 l0 -19 M130 61 l5 18 M155 76 l3 -18 M155 76 l7 16 M178 94 l5 -16 M178 94 l9 13" />
-        </g>
-        <g stroke="#2e8a5c" stroke-width="1.6" opacity=".8">
-          <path d="M42 25 l-10 -12 M42 25 l-6 15 M67 32 l-8 -14 M67 32 l-3 17 M92 42 l-6 -15 M92 42 l-1 18 M117 54 l-4 -16 M117 54 l2 17 M142 68 l-1 -16 M142 68 l5 15 M166 85 l2 -15 M166 85 l7 13" />
-        </g>
-        <circle cx="62" cy="52" r="7" fill="#c8102e" stroke="none" />
-        <circle cx="122" cy="84" r="6" fill="#d4af6a" stroke="none" />
-        <circle cx="168" cy="112" r="7.5" fill="#c8102e" stroke="none" />
-        <path d="M122 70 v8 M168 96 v9 M62 37 v8" stroke="#d4af6a" stroke-width="1" />
-      </g>
+      <radialGradient id="g-rojo" cx="35%" cy="32%" r="75%"><stop offset="0" stop-color="#ff5a6e" /><stop offset=".35" stop-color="#c8102e" /><stop offset="1" stop-color="#4a0510" /></radialGradient>
+      <radialGradient id="g-oro" cx="35%" cy="32%" r="75%"><stop offset="0" stop-color="#fff3cf" /><stop offset=".35" stop-color="#d9b46a" /><stop offset="1" stop-color="#6b4c1c" /></radialGradient>
+      <radialGradient id="g-verde" cx="35%" cy="32%" r="75%"><stop offset="0" stop-color="#5fd39a" /><stop offset=".35" stop-color="#17704a" /><stop offset="1" stop-color="#062a1b" /></radialGradient>
+      <linearGradient id="g-tapa" x1="0" x2="1"><stop offset="0" stop-color="#8a6a2f" /><stop offset=".5" stop-color="#f6e3b0" /><stop offset="1" stop-color="#8a6a2f" /></linearGradient>
+      <g id="tapa"><circle cx="30" cy="3" r="3" fill="none" stroke="#d4af6a" stroke-width="1.4" /><rect x="23" y="5" width="14" height="8" rx="1.5" fill="url(#g-tapa)" /></g>
+      <g id="brillo"><ellipse cx="20" cy="30" rx="8" ry="4.5" fill="#fff" opacity=".35" transform="rotate(-35 20 30)" /><circle cx="15" cy="38" r="1.6" fill="#fff" opacity=".5" /></g>
+      <symbol id="bola-roja" viewBox="0 0 60 72"><use href="#tapa" /><circle cx="30" cy="42" r="28" fill="url(#g-rojo)" /><path d="M3.5 46 Q30 56 56.5 46" fill="none" stroke="#d4af6a" stroke-width="1.2" opacity=".8" /><path d="M5 52 Q30 61 55 52" fill="none" stroke="#d4af6a" stroke-width=".8" opacity=".55" /><use href="#brillo" /></symbol>
+      <symbol id="bola-oro" viewBox="0 0 60 72"><use href="#tapa" /><circle cx="30" cy="42" r="28" fill="url(#g-oro)" /><use href="#brillo" /></symbol>
+      <symbol id="bola-verde" viewBox="0 0 60 72"><use href="#tapa" /><circle cx="30" cy="42" r="28" fill="url(#g-verde)" /><path d="M3.5 40 Q30 50 56.5 40" fill="none" stroke="#d4af6a" stroke-width="1.2" opacity=".75" /><use href="#brillo" /></symbol>
+      <symbol id="estrella" viewBox="0 0 60 60"><path d="M30 3l7.6 17.4 18.9 1.8-14.3 12.6 4.2 18.6L30 43.6l-16.4 9.8 4.2-18.6L3.5 22.2l18.9-1.8z" fill="url(#g-oro)" stroke="#f6e3b0" stroke-width="1" /></symbol>
     </defs>
   </svg>
+  <div class="adornos" aria-hidden="true">
+    <div class="adorno" style="--x: 5%; --l: 70px; --s: 40px; --d: -0.8s"><svg viewBox="0 0 60 72"><use href="#bola-verde" /></svg></div>
+    <div class="adorno" style="--x: 12%; --l: 130px; --s: 52px; --d: -2.1s"><svg viewBox="0 0 60 72"><use href="#bola-roja" /></svg></div>
+    <div class="adorno adorno--estrella" style="--x: 19.5%; --l: 46px; --s: 30px; --d: -1.4s"><svg viewBox="0 0 60 60"><use href="#estrella" /></svg></div>
+    <div class="adorno adorno--der" style="--x: 80%; --l: 56px; --s: 30px; --d: -0.3s"><svg viewBox="0 0 60 60"><use href="#estrella" /></svg></div>
+    <div class="adorno adorno--der" style="--x: 87%; --l: 110px; --s: 48px; --d: -1.7s"><svg viewBox="0 0 60 72"><use href="#bola-oro" /></svg></div>
+    <div class="adorno adorno--der" style="--x: 94.5%; --l: 64px; --s: 38px; --d: -2.6s"><svg viewBox="0 0 60 72"><use href="#bola-roja" /></svg></div>
+  </div>
 
   <main>
     <!-- Tarjeta de invitación -->
     <section class="tarjeta">
       <span class="esq esq--1"></span><span class="esq esq--2"></span><span class="esq esq--3"></span><span class="esq esq--4"></span>
-      <img class="logo" src="../img/logo-circulo.webp" width="96" height="93" alt="PVC La Curva" />
+      <img class="logo" src="./logo.webp" width="560" height="352" alt="Estructura y PVC La Curva" />
       <p class="kicker">PVC La Curva te invita a su</p>
       <h1><span>Fiesta de</span> <em>Navidad</em></h1>
       <div class="filete" aria-hidden="true"><span></span><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z" /></svg><span></span></div>
