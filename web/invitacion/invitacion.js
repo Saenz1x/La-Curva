@@ -18,7 +18,7 @@ const EVENTO = {
 };
 // Las confirmaciones llegan a este correo por FormSubmit (formsubmit.co).
 // La primera vez, FormSubmit envía a este correo un mensaje para activar el formulario.
-const CORREO = 'gestionhumanapvclacurva@gmail.com';
+const CORREO = 'pvclacurva.co@gmail.com';
 
 const $ = (s) => document.querySelector(s);
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
