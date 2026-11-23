@@ -42,7 +42,8 @@ export function initNav() {
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !menu.hidden) close(); });
 
   // enlace activo (menú de escritorio y barra inferior)
-  const marcar = (links) => links.forEach((a) => {
+  // (solo los enlaces a secciones de esta página: «catalogo/» es otra página)
+  const marcar = (links) => links.filter((a) => a.getAttribute('href').startsWith('#')).forEach((a) => {
     const sec = document.querySelector(a.getAttribute('href'));
     if (!sec) return;
     ScrollTrigger.create({ trigger: sec, start: 'top 55%', end: 'bottom 45%', onToggle: (s) => a.classList.toggle('is-active', s.isActive) });

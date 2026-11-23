@@ -13,6 +13,14 @@ export const PRODUCTOS_CALC = [
 
 export const DESPERDICIO_DEFECTO = 10; // %
 
+// Curvi, asistente con IA (flujo de n8n en el VPS).
+// chatUrl: URL del nodo «Chat Trigger» de n8n (público, modo «Embedded Chat»). Vacío = el chat ofrece seguir por WhatsApp.
+export const CURVI = {
+  chatUrl: '',
+  whatsapp: '573105004717',
+  whatsappTexto: '310 500 4717',
+};
+
 export const waLink = (numero, texto) =>
   `https://wa.me/${numero}${texto ? `?text=${encodeURIComponent(texto)}` : ''}`;
 

@@ -1,0 +1,1946 @@
+{
+  "actualizado": "2026-11-23",
+  "venta_en_linea": {
+    "whatsapp": "573024902272",
+    "texto": "302 490 2272",
+    "lineas": [
+      "adhesivos",
+      "nomasclavos"
+    ]
+  },
+  "lineas": [
+    {
+      "id": "wpc",
+      "nombre": "Paneles WPC",
+      "categoria": "Paredes",
+      "resumen": "Panel acanalado de última tendencia para salas, alcobas, recepciones y TV walls. Look de madera o mármol, con instalación rápida y limpia.",
+      "portada": "img/catalogo/wpc_amb_g2.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Medida",
+          "2,90 m × 16 cm"
+        ],
+        [
+          "Otros largos",
+          "2,60 m · 2,70 m · 2,95 m (PSE New)"
+        ],
+        [
+          "Espesor",
+          "23 mm"
+        ],
+        [
+          "Unidades por caja",
+          "12 piezas"
+        ],
+        [
+          "Material",
+          "WPC (madera + polímero)"
+        ],
+        [
+          "Instalación",
+          "Adaptador metálico o adhesivo No Más Clavos"
+        ]
+      ],
+      "beneficios": [
+        "Alta durabilidad",
+        "Fácil de instalar",
+        "Acabado premium",
+        "Diseño acanalado moderno",
+        "Más de 25 referencias"
+      ],
+      "grupos": [
+        {
+          "titulo": "Tonos madera",
+          "productos": [
+            {
+              "nombre": "B-20",
+              "codigo": "Cd 1227",
+              "imagen": "img/catalogo/wpc_b20.webp"
+            },
+            {
+              "nombre": "I-10",
+              "codigo": "Cd 1282",
+              "imagen": "img/catalogo/wpc_i10.webp"
+            },
+            {
+              "nombre": "WPC 04",
+              "codigo": "Cd 1208",
+              "imagen": "img/catalogo/wpc_04.webp"
+            },
+            {
+              "nombre": "WPC 05",
+              "codigo": "Cd 1301",
+              "imagen": "img/catalogo/wpc_05b.webp"
+            },
+            {
+              "nombre": "17805",
+              "codigo": "Cd 1202",
+              "imagen": "img/catalogo/wpc_17805.webp"
+            },
+            {
+              "nombre": "WPC Arena",
+              "codigo": "Cd 1201",
+              "imagen": "img/catalogo/wpc_arena.webp"
+            },
+            {
+              "nombre": "Nueva presentación #08",
+              "imagen": "img/catalogo/wpc_08.webp"
+            },
+            {
+              "nombre": "Nueva presentación #02",
+              "imagen": "img/catalogo/wpc_02.webp"
+            },
+            {
+              "nombre": "Guill-449",
+              "codigo": "Cd 1212",
+              "detalle": "Roble doble tono",
+              "imagen": "img/catalogo/wpc_guill449.webp"
+            },
+            {
+              "nombre": "WPC 09",
+              "codigo": "Cd 1277",
+              "imagen": "img/catalogo/wpc_09.webp"
+            },
+            {
+              "nombre": "X10 · Guill-435",
+              "codigo": "Cd 1280",
+              "imagen": "img/catalogo/wpc_x10.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Efecto mármol",
+          "productos": [
+            {
+              "nombre": "F-10",
+              "codigo": "Cd 1274 · Cd 1250",
+              "imagen": "img/catalogo/wpc_f10.webp"
+            },
+            {
+              "nombre": "C-2",
+              "codigo": "Cd 1246",
+              "imagen": "img/catalogo/wpc_c2.webp"
+            },
+            {
+              "nombre": "G-431",
+              "imagen": "img/catalogo/wpc_g431.webp"
+            },
+            {
+              "nombre": "Blanco Venecia",
+              "codigo": "Cd 1245",
+              "imagen": "img/catalogo/wpc_venecia.webp"
+            },
+            {
+              "nombre": "Guill-430",
+              "codigo": "Cd 1306",
+              "detalle": "Mármol dorado",
+              "imagen": "img/catalogo/wpc_guill430.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Sólidos y metalizados",
+          "productos": [
+            {
+              "nombre": "D-8",
+              "codigo": "Cd 1281",
+              "detalle": "Gris oscuro",
+              "imagen": "img/catalogo/wpc_d8.webp"
+            },
+            {
+              "nombre": "Nueva presentación #04",
+              "imagen": "img/catalogo/wpc_04negro.webp"
+            },
+            {
+              "nombre": "Guill-297",
+              "codigo": "Cd 1315",
+              "imagen": "img/catalogo/wpc_guill297.webp"
+            },
+            {
+              "nombre": "Nueva presentación #01",
+              "imagen": "img/catalogo/wpc_01.webp"
+            },
+            {
+              "nombre": "Nueva presentación #03",
+              "imagen": "img/catalogo/wpc_03.webp"
+            },
+            {
+              "nombre": "Nueva presentación #11",
+              "imagen": "img/catalogo/wpc_11.webp"
+            },
+            {
+              "nombre": "Nueva presentación #07",
+              "detalle": "Plata",
+              "imagen": "img/catalogo/wpc_07.webp"
+            },
+            {
+              "nombre": "WPC Dorado",
+              "imagen": "img/catalogo/wpc_dorado.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Ambientes de referencia",
+          "productos": [
+            {
+              "nombre": "J-17",
+              "detalle": "Gris oscuro",
+              "imagen": "img/catalogo/wpc_amb_j17.webp"
+            },
+            {
+              "nombre": "G-2",
+              "detalle": "Madera con ranura negra",
+              "imagen": "img/catalogo/wpc_amb_g2.webp"
+            },
+            {
+              "nombre": "A-26",
+              "detalle": "Madera miel",
+              "imagen": "img/catalogo/wpc_amb_a26.webp"
+            },
+            {
+              "nombre": "E-26",
+              "detalle": "Madera clara",
+              "imagen": "img/catalogo/wpc_amb_e26.webp"
+            },
+            {
+              "nombre": "Avena",
+              "detalle": "Blanco hueso",
+              "imagen": "img/catalogo/wpc_amb_avena.webp"
+            },
+            {
+              "nombre": "H-10",
+              "detalle": "Mármol",
+              "imagen": "img/catalogo/wpc_amb_h10.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Accesorios WPC",
+          "productos": [
+            {
+              "nombre": "Adaptador para WPC",
+              "detalle": "Clip metálico que adapta y fija el panel",
+              "imagen": "img/catalogo/wpc_adaptador.webp"
+            },
+            {
+              "nombre": "Terminales WPC",
+              "detalle": "Blanco, envejecido, gris doble tono, gris elefante, multicolor y roble doble tono"
+            },
+            {
+              "nombre": "Ángulos WPC",
+              "detalle": "Colores surtidos"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marmol",
+      "nombre": "Láminas marmolizadas",
+      "categoria": "Paredes",
+      "resumen": "El estilo del mármol sin pagar el precio del mármol. Brillo y elegancia para paredes de salas, cocinas, baños y locales.",
+      "portada": "img/catalogo/mar_guill38.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Formato",
+          "1,22 × 2,44 m"
+        ],
+        [
+          "Algunos diseños",
+          "1,22 × 2,50 m"
+        ],
+        [
+          "Espesor",
+          null
+        ],
+        [
+          "Acabado",
+          "Alto brillo"
+        ],
+        [
+          "Uso",
+          "Pared interior"
+        ],
+        [
+          "Remates",
+          "Perfiles negro, plata o dorado"
+        ]
+      ],
+      "beneficios": [
+        "Elegancia y acabado de lujo",
+        "Brillo tipo porcelanato",
+        "Rápida de limpiar",
+        "Ideal para cocinas, baños y locales"
+      ],
+      "grupos": [
+        {
+          "titulo": "Yulkraf y Lux Panel",
+          "productos": [
+            {
+              "nombre": "Yulk 06",
+              "imagen": "img/catalogo/mar_yulk06.webp"
+            },
+            {
+              "nombre": "Yulk 08",
+              "codigo": "LJ8001-HCD441",
+              "imagen": "img/catalogo/mar_yulk08.webp"
+            },
+            {
+              "nombre": "Yulk 10",
+              "imagen": "img/catalogo/mar_yulk10.webp"
+            },
+            {
+              "nombre": "Yulk 12",
+              "imagen": "img/catalogo/mar_yulk12.webp"
+            },
+            {
+              "nombre": "Yulk 14",
+              "imagen": "img/catalogo/mar_yulk14.webp"
+            },
+            {
+              "nombre": "Yulk 17",
+              "imagen": "img/catalogo/mar_yulk17.webp"
+            },
+            {
+              "nombre": "Yulk 18",
+              "imagen": "img/catalogo/mar_yulk18.webp"
+            },
+            {
+              "nombre": "Yulk 46",
+              "codigo": "LTY68",
+              "imagen": "img/catalogo/mar_yulk46.webp"
+            },
+            {
+              "nombre": "Yulk 47",
+              "imagen": "img/catalogo/mar_yulk47.webp"
+            },
+            {
+              "nombre": "Lux Panel",
+              "imagen": "img/catalogo/mar_lux.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Colección Guill y más",
+          "productos": [
+            {
+              "nombre": "Guill 28",
+              "detalle": "Azul y dorado",
+              "imagen": "img/catalogo/mar_guill28.webp"
+            },
+            {
+              "nombre": "Guill 38",
+              "detalle": "Vetas doradas",
+              "imagen": "img/catalogo/mar_guill38.webp"
+            },
+            {
+              "nombre": "Guill 49",
+              "detalle": "Dorado y celeste",
+              "imagen": "img/catalogo/mar_guill49.webp"
+            },
+            {
+              "nombre": "YP-72",
+              "detalle": "Dorado y gris",
+              "imagen": "img/catalogo/mar_yp72.webp"
+            },
+            {
+              "nombre": "YP-83",
+              "detalle": "Vetas grises y vino",
+              "imagen": "img/catalogo/mar_yp83.webp"
+            },
+            {
+              "nombre": "YP-95",
+              "detalle": "Vetas café",
+              "imagen": "img/catalogo/mar_yp95.webp"
+            },
+            {
+              "nombre": "UV-12",
+              "codigo": "KL8231",
+              "detalle": "Negro con líneas cobre",
+              "imagen": "img/catalogo/mar_uv12.webp"
+            },
+            {
+              "nombre": "Variedad en bodega",
+              "detalle": "Pregunta por los diseños disponibles",
+              "imagen": "img/catalogo/mar_rollos.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Más referencias",
+          "productos": [
+            {
+              "nombre": "Guill 04"
+            },
+            {
+              "nombre": "Guill 10"
+            },
+            {
+              "nombre": "Guill 14/34"
+            },
+            {
+              "nombre": "Guill 20"
+            },
+            {
+              "nombre": "Guill 40"
+            },
+            {
+              "nombre": "Guill 47"
+            },
+            {
+              "nombre": "Guill 52"
+            },
+            {
+              "nombre": "Guill 57"
+            },
+            {
+              "nombre": "Guill 58"
+            },
+            {
+              "nombre": "G-08/G17"
+            },
+            {
+              "nombre": "YS-37110"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "artisticas",
+      "nombre": "Láminas artísticas",
+      "categoria": "Paredes",
+      "resumen": "Arte a gran formato para tu pared: imágenes religiosas, paisajes y motivos que se convierten en el centro de tu sala, negocio o espacio de oración.",
+      "portada": "img/catalogo/art_yulk30.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Referencias",
+          "Yulk 23, 24, 28, 30, 37 y 38"
+        ],
+        [
+          "Formato",
+          "1,22 × 2,44 m"
+        ],
+        [
+          "Espesor",
+          null
+        ],
+        [
+          "Acabado",
+          "Brillante, impresión a color"
+        ],
+        [
+          "Uso",
+          "Pared interior"
+        ],
+        [
+          "Marca",
+          "Yulkraf"
+        ]
+      ],
+      "beneficios": [
+        "Diseños exclusivos",
+        "Colores vivos",
+        "Se instala como la lámina marmolizada",
+        "Ideal para salas y negocios"
+      ],
+      "grupos": [
+        {
+          "titulo": "Diseños",
+          "productos": [
+            {
+              "nombre": "Yulk 23",
+              "detalle": "Pesebre",
+              "imagen": "img/catalogo/art_yulk23.webp"
+            },
+            {
+              "nombre": "Yulk 24",
+              "detalle": "Sagrado Corazón",
+              "imagen": "img/catalogo/art_yulk24.webp"
+            },
+            {
+              "nombre": "Yulk 38",
+              "detalle": "Virgen",
+              "imagen": "img/catalogo/art_yulk38.webp"
+            },
+            {
+              "nombre": "Yulk 37",
+              "detalle": "San Miguel Arcángel",
+              "imagen": "img/catalogo/art_yulk37.webp"
+            },
+            {
+              "nombre": "Yulk 30",
+              "detalle": "Santorini",
+              "imagen": "img/catalogo/art_yulk30.webp"
+            },
+            {
+              "nombre": "Yulk 28",
+              "detalle": "Vacuno",
+              "imagen": "img/catalogo/art_yulk28.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adhesivos",
+      "nombre": "Adhesivos decorativos y cabeceras",
+      "categoria": "Paredes",
+      "resumen": "Renueva paredes y muebles sin obra: se despega el respaldo y se pega. PVC adhesivo en rollo con efecto mármol y cabeceras 3D para armar a tu gusto.",
+      "portada": "img/catalogo/adh_4208.webp",
+      "venta": "en-linea",
+      "ficha": [
+        [
+          "Instalación",
+          "Autoadhesivo, solo pegar"
+        ],
+        [
+          "PVC adhesivo en rollo",
+          "1,20 × 3 m · efecto mármol"
+        ],
+        [
+          "Adhesivos",
+          "13 diseños · Cd 4194 a 4208"
+        ],
+        [
+          "Cabeceras",
+          "3 diseños · Cd 4191 a 4193"
+        ],
+        [
+          "Medidas adhesivos",
+          null
+        ]
+      ],
+      "beneficios": [
+        "Sin taladro ni herramientas",
+        "Fácil de instalar",
+        "Cambia el estilo en minutos",
+        "Habitaciones y salas"
+      ],
+      "grupos": [
+        {
+          "titulo": "Adhesivos decorativos",
+          "productos": [
+            {
+              "nombre": "Cd 4208",
+              "codigo": "Rf-1810-407-2",
+              "imagen": "img/catalogo/adh_4208.webp"
+            },
+            {
+              "nombre": "Cd 4200",
+              "codigo": "Rf-ID3J",
+              "imagen": "img/catalogo/adh_4200.webp"
+            },
+            {
+              "nombre": "Cd 4201",
+              "codigo": "Rf-7010J",
+              "imagen": "img/catalogo/adh_4201.webp"
+            },
+            {
+              "nombre": "Cd 4202",
+              "codigo": "Rf-7067-J",
+              "imagen": "img/catalogo/adh_4202.webp"
+            },
+            {
+              "nombre": "Cd 4195",
+              "codigo": "Rf-1115-3",
+              "imagen": "img/catalogo/adh_4195.webp"
+            },
+            {
+              "nombre": "Cd 4194",
+              "codigo": "Rf-1115-1",
+              "imagen": "img/catalogo/adh_4194.webp"
+            },
+            {
+              "nombre": "Cd 4196",
+              "codigo": "Rf-1115-4",
+              "imagen": "img/catalogo/adh_4196.webp"
+            },
+            {
+              "nombre": "Cd 4197",
+              "codigo": "Rf-440106-3",
+              "imagen": "img/catalogo/adh_4197.webp"
+            },
+            {
+              "nombre": "Cd 4198",
+              "codigo": "Rf-1119-1",
+              "imagen": "img/catalogo/adh_4198.webp"
+            },
+            {
+              "nombre": "Cd 4199",
+              "codigo": "Rf-1126-1",
+              "imagen": "img/catalogo/adh_4199.webp"
+            },
+            {
+              "nombre": "Cd 4204",
+              "codigo": "Rf-SW-02",
+              "imagen": "img/catalogo/adh_4204.webp"
+            },
+            {
+              "nombre": "Cd 4205",
+              "codigo": "Rf-7070",
+              "imagen": "img/catalogo/adh_4205.webp"
+            },
+            {
+              "nombre": "Cd 4207",
+              "codigo": "Rf-599",
+              "imagen": "img/catalogo/adh_4207.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Cabeceras adhesivas 3D",
+          "productos": [
+            {
+              "nombre": "Tono arena",
+              "codigo": "Cd 4191 · Rf-RY-22",
+              "imagen": "img/catalogo/cab_4191.webp"
+            },
+            {
+              "nombre": "Terciopelo verde",
+              "codigo": "Cd 4192 · Rf-RJ-22",
+              "imagen": "img/catalogo/cab_4192.webp"
+            },
+            {
+              "nombre": "Blanco",
+              "codigo": "Cd 4193 · Rf-PJ-02",
+              "imagen": "img/catalogo/cab_4193.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "PVC adhesivo en rollo (1,20 × 3 m)",
+          "productos": [
+            {
+              "nombre": "BS 3752",
+              "imagen": "img/catalogo/mar_bs3752.webp"
+            },
+            {
+              "nombre": "BS 3753",
+              "detalle": "Azul y dorado",
+              "imagen": "img/catalogo/mar_bs3753.webp"
+            },
+            {
+              "nombre": "HC8887-1",
+              "detalle": "Vetas cobre",
+              "imagen": "img/catalogo/mar_hc8887.webp"
+            },
+            {
+              "nombre": "BS 3757Y"
+            },
+            {
+              "nombre": "BS 3758Y"
+            },
+            {
+              "nombre": "BS 3777LM"
+            },
+            {
+              "nombre": "PLD2028"
+            },
+            {
+              "nombre": "PLD2029"
+            },
+            {
+              "nombre": "PLD2030"
+            },
+            {
+              "nombre": "PLD2031"
+            },
+            {
+              "nombre": "PLD2036"
+            },
+            {
+              "nombre": "33047"
+            },
+            {
+              "nombre": "33049"
+            },
+            {
+              "nombre": "33050"
+            },
+            {
+              "nombre": "33054"
+            },
+            {
+              "nombre": "611D1"
+            },
+            {
+              "nombre": "595-90559D1"
+            },
+            {
+              "nombre": "6263-629D1"
+            },
+            {
+              "nombre": "T9056801"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recubrimiento",
+      "nombre": "Láminas de recubrimiento de pared",
+      "categoria": "Paredes",
+      "resumen": "Láminas para revestir muros con acabado ladrillo, madera, piedra o textura en relieve. Un espacio nuevo, sin resanar ni pintar.",
+      "portada": "img/catalogo/tienda_pared.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Diseños",
+          "Ladrillo, madera, piedra y más"
+        ],
+        [
+          "Lámina texturizada",
+          "Blanco, crema y gris claro"
+        ],
+        [
+          "Medidas",
+          null
+        ],
+        [
+          "Espesor",
+          null
+        ],
+        [
+          "Ángulos de pared",
+          "Ladrillo tradicional, ladrillo oscuro, mosaico, mármol blanco, texturizado flores, arena"
+        ],
+        [
+          "Uso",
+          "Salas, habitaciones, cocinas, baños, oficinas y locales"
+        ]
+      ],
+      "beneficios": [
+        "Fácil instalación",
+        "Resiste la humedad",
+        "Gran variedad de diseños",
+        "Ideal para renovar tus espacios"
+      ],
+      "grupos": [
+        {
+          "titulo": "Recubrimiento",
+          "productos": [
+            {
+              "nombre": "Ladrillo, madera y piedra",
+              "imagen": "img/catalogo/rec_muestras.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Lámina decorativa texturizada",
+          "productos": [
+            {
+              "nombre": "Blanco",
+              "imagen": "img/catalogo/tex_amb1.webp"
+            },
+            {
+              "nombre": "Crema",
+              "imagen": "img/catalogo/tex_amb2.webp"
+            },
+            {
+              "nombre": "Gris claro",
+              "imagen": "img/catalogo/tex_amb3.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Ángulos de pared a juego",
+          "productos": [
+            {
+              "nombre": "Ladrillo tradicional"
+            },
+            {
+              "nombre": "Ladrillo oscuro"
+            },
+            {
+              "nombre": "Mosaico"
+            },
+            {
+              "nombre": "Mármol blanco"
+            },
+            {
+              "nombre": "Texturizado flores"
+            },
+            {
+              "nombre": "Arena"
+            },
+            {
+              "nombre": "Perfil J mármol blanco"
+            },
+            {
+              "nombre": "Perfil J mármol beige"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pisos",
+      "nombre": "Pisos SPC",
+      "categoria": "Pisos",
+      "resumen": "Piso de última generación con apariencia de madera. Se instala con sistema clic, sin pegante, y aguanta el agua y el alto tráfico.",
+      "portada": "img/catalogo/spc_nogal_sereno.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Tabla estándar",
+          "1,22 m × 18 cm · caja de 10 tablas"
+        ],
+        [
+          "Formato largo",
+          "1,54 m × 23 cm · 2,1252 m² por caja"
+        ],
+        [
+          "Formato XL",
+          "Ref. 01, 03 y 05 · caja de 6 tablas"
+        ],
+        [
+          "Espesor",
+          null
+        ],
+        [
+          "Instalación",
+          "Clic, sin pegante"
+        ],
+        [
+          "Complementos",
+          "Zócalos, uniones y reductores"
+        ]
+      ],
+      "beneficios": [
+        "Resiste el agua",
+        "Clic, sin pegante",
+        "Alto tráfico",
+        "Look de madera real"
+      ],
+      "grupos": [
+        {
+          "titulo": "Tabla 1,22 m × 18 cm",
+          "productos": [
+            {
+              "nombre": "Marfil Imperial",
+              "imagen": "img/catalogo/spc_marfil_imperial.webp"
+            },
+            {
+              "nombre": "Roble Páramo",
+              "detalle": "Con bisel",
+              "imagen": "img/catalogo/spc_roble_paramo.webp"
+            },
+            {
+              "nombre": "Buriticá Reserva",
+              "detalle": "Con bisel",
+              "imagen": "img/catalogo/spc_buritica_reserva.webp"
+            },
+            {
+              "nombre": "Roble Reserva",
+              "codigo": "Cd 90218",
+              "detalle": "Con bisel",
+              "imagen": "img/catalogo/spc_roble_reserva.webp"
+            },
+            {
+              "nombre": "Roble Montano",
+              "codigo": "Cd 90215",
+              "detalle": "Con bisel",
+              "imagen": "img/catalogo/spc_roble_montano.webp"
+            },
+            {
+              "nombre": "Gris Ceniza",
+              "codigo": "Cd 90216",
+              "detalle": "Con bisel",
+              "imagen": "img/catalogo/spc_gris_ceniza.webp"
+            },
+            {
+              "nombre": "Roble Arena",
+              "imagen": "img/catalogo/spc_roble_arena.webp"
+            },
+            {
+              "nombre": "Bruma Natural",
+              "imagen": "img/catalogo/spc_bruma_natural.webp"
+            },
+            {
+              "nombre": "Roble Valle",
+              "imagen": "img/catalogo/spc_roble_valle.webp"
+            },
+            {
+              "nombre": "Roble Nórdico",
+              "imagen": "img/catalogo/spc_roble_nordico.webp"
+            },
+            {
+              "nombre": "Nogal Sereno",
+              "imagen": "img/catalogo/spc_nogal_sereno.webp"
+            },
+            {
+              "nombre": "Miel Cafetera",
+              "imagen": "img/catalogo/spc_miel_cafetera.webp"
+            },
+            {
+              "nombre": "Arena Dorada",
+              "imagen": "img/catalogo/spc_arena_dorada.webp"
+            },
+            {
+              "nombre": "Acero Urbano",
+              "detalle": "Nueva referencia"
+            },
+            {
+              "nombre": "Gris Urbano Cálido",
+              "detalle": "Nueva referencia"
+            },
+            {
+              "nombre": "Hormigón Envejecido",
+              "detalle": "Nueva referencia"
+            },
+            {
+              "nombre": "Niebla Ártica",
+              "detalle": "Nueva referencia"
+            }
+          ]
+        },
+        {
+          "titulo": "Formato largo 1,54 m × 23 cm",
+          "productos": [
+            {
+              "nombre": "Cedro Maple",
+              "imagen": "img/catalogo/spc_cedro_maple.webp"
+            },
+            {
+              "nombre": "Amber Maple",
+              "imagen": "img/catalogo/spc_amber_maple.webp"
+            },
+            {
+              "nombre": "Golden Oak",
+              "imagen": "img/catalogo/spc_golden_oak.webp"
+            },
+            {
+              "nombre": "Silver Ash",
+              "codigo": "90201 / 001",
+              "imagen": "img/catalogo/spc_90201.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Formato XL",
+          "productos": [
+            {
+              "nombre": "SPC XL Ref. 01",
+              "detalle": "Caja de 6 tablas"
+            },
+            {
+              "nombre": "SPC XL Ref. 03",
+              "detalle": "Caja de 6 tablas"
+            },
+            {
+              "nombre": "SPC XL Ref. 05",
+              "detalle": "Caja de 6 tablas"
+            }
+          ]
+        },
+        {
+          "titulo": "Uniones para piso",
+          "productos": [
+            {
+              "nombre": "Roble Sereno",
+              "imagen": "img/catalogo/rem_roble_sereno.webp"
+            },
+            {
+              "nombre": "Golden Oak",
+              "imagen": "img/catalogo/rem_golden_oak.webp"
+            },
+            {
+              "nombre": "Silver Ash",
+              "imagen": "img/catalogo/rem_silver_ash.webp"
+            },
+            {
+              "nombre": "Mossy Walnut",
+              "imagen": "img/catalogo/rem_mossy_walnut.webp"
+            },
+            {
+              "nombre": "Cedro Maple",
+              "imagen": "img/catalogo/rem_cedro_maple.webp"
+            },
+            {
+              "nombre": "Amber Maple"
+            }
+          ]
+        },
+        {
+          "titulo": "Reductores · 2,40 m",
+          "productos": [
+            {
+              "nombre": "Nogal Clásico",
+              "detalle": "2,40 m",
+              "imagen": "img/catalogo/red_nogal_clasico.webp"
+            },
+            {
+              "nombre": "Roble Natural",
+              "detalle": "2,40 m",
+              "imagen": "img/catalogo/red_roble_natural.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Zócalos a juego",
+          "productos": [
+            {
+              "nombre": "Blanco nórdico"
+            },
+            {
+              "nombre": "Cedro maple",
+              "codigo": "P8028"
+            },
+            {
+              "nombre": "Gris platino"
+            },
+            {
+              "nombre": "Nogal clásico"
+            },
+            {
+              "nombre": "Roble claro"
+            },
+            {
+              "nombre": "Roble natural"
+            },
+            {
+              "nombre": "Silver ash",
+              "codigo": "P8023"
+            },
+            {
+              "nombre": "Blanco"
+            },
+            {
+              "nombre": "Negro"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cielo",
+      "nombre": "Cielo raso en PVC y aislantes",
+      "categoria": "Techos",
+      "resumen": "¿Techo con humedad? El cielo raso en PVC no se pudre, no le entra la humedad y queda listo rápido. Compleméntalo con aislante térmico.",
+      "portada": "img/catalogo/cielo_lamina.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Material",
+          "Lámina de PVC"
+        ],
+        [
+          "Medidas",
+          null
+        ],
+        [
+          "Colores",
+          null
+        ],
+        [
+          "Láminas 9 mm",
+          "30 cm de ancho · 5 diseños"
+        ],
+        [
+          "Estructura",
+          "Perfilería galvanizada de fábrica propia"
+        ],
+        [
+          "Yumbolón térmico",
+          "3 mm · rollo de 100 m"
+        ],
+        [
+          "Yumbolón",
+          "5 mm · rollo de 100 × 1 m"
+        ]
+      ],
+      "beneficios": [
+        "No se pudre",
+        "No le entra la humedad",
+        "Queda listo rápido",
+        "Se limpia con un trapo"
+      ],
+      "grupos": [
+        {
+          "titulo": "Cielo raso en PVC",
+          "productos": [
+            {
+              "nombre": "Láminas en bodega",
+              "imagen": "img/catalogo/cielo_stock.webp"
+            },
+            {
+              "nombre": "Despacho a obra",
+              "imagen": "img/catalogo/cielo_bodega.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Láminas de 9 mm · 30 cm",
+          "productos": [
+            {
+              "nombre": "Ejecutivo"
+            },
+            {
+              "nombre": "Blanco Andy"
+            },
+            {
+              "nombre": "Cedro tradicional"
+            },
+            {
+              "nombre": "Ibiza tres canales"
+            },
+            {
+              "nombre": "Ref. 026"
+            }
+          ]
+        },
+        {
+          "titulo": "Aislantes térmicos",
+          "productos": [
+            {
+              "nombre": "Yumbolón térmico 3 mm",
+              "detalle": "Rollo de 100 m",
+              "imagen": "img/catalogo/yum_1.webp"
+            },
+            {
+              "nombre": "Yumbolón 5 mm",
+              "detalle": "Rollo de 100 × 1 m",
+              "imagen": "img/catalogo/yum_3.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "perfileria",
+      "nombre": "Perfilería galvanizada",
+      "categoria": "Estructura",
+      "resumen": "La estructura que sostiene tu cielo raso y tus muros en drywall, hecha en nuestra propia fábrica.",
+      "portada": "img/catalogo/gal_omega.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Material",
+          "Acero galvanizado"
+        ],
+        [
+          "Línea",
+          "Estructura mediana"
+        ],
+        [
+          "Calibre",
+          "28"
+        ],
+        [
+          "Referencias",
+          "Ángulo, canal 6B, omega, paral B6, principal"
+        ],
+        [
+          "Nuevo ingreso",
+          "Paral 59 y Canal 60"
+        ],
+        [
+          "Largo por pieza",
+          null
+        ]
+      ],
+      "beneficios": [
+        "Resistente",
+        "Liviana",
+        "Directo de fábrica",
+        "Para divisiones y cielos rasos"
+      ],
+      "grupos": [
+        {
+          "titulo": "Referencias",
+          "productos": [
+            {
+              "nombre": "Ángulo",
+              "detalle": "Remate perimetral del cielo raso contra el muro",
+              "imagen": "img/catalogo/gal_angulo.webp"
+            },
+            {
+              "nombre": "Canal 6B",
+              "detalle": "Guía inferior y superior para muros en drywall. Nuevo ingreso: Canal 60",
+              "imagen": "img/catalogo/gal_canal.webp"
+            },
+            {
+              "nombre": "Omega",
+              "detalle": "Soporte perforado para fijar las láminas del cielo raso",
+              "imagen": "img/catalogo/gal_omega.webp"
+            },
+            {
+              "nombre": "Paral B6",
+              "detalle": "Pieza vertical del muro. Nuevo ingreso: Paral 59",
+              "imagen": "img/catalogo/gal_paral.webp"
+            },
+            {
+              "nombre": "Principal",
+              "detalle": "Perfil para cielo raso suspendido"
+            }
+          ]
+        },
+        {
+          "titulo": "Tornillería",
+          "productos": [
+            {
+              "nombre": "Punta broca"
+            },
+            {
+              "nombre": "Punta aguda"
+            },
+            {
+              "nombre": "Estructura fina"
+            },
+            {
+              "nombre": "Drywall 1\" para madera"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tubos",
+      "nombre": "Tubos estructurales",
+      "categoria": "Estructura",
+      "resumen": "Para techos, rejas, portones y estructuras. Tubo cuadrado y rectangular en varias medidas y calibres.",
+      "portada": "img/catalogo/tubo_hr_76x38_c16.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Formas",
+          "Cuadrado y rectangular"
+        ],
+        [
+          "Tipos",
+          "HR (laminado en caliente) y CR (laminado en frío)"
+        ],
+        [
+          "Calibres",
+          "11, 12, 14, 16 y 18"
+        ],
+        [
+          "Largo por tubo",
+          null
+        ],
+        [
+          "Uso",
+          "Techos, rejas, portones y estructuras"
+        ]
+      ],
+      "beneficios": [
+        "Disponibles en diferentes medidas",
+        "Resistentes para estructura",
+        "Para obra y metalmecánica"
+      ],
+      "grupos": [
+        {
+          "titulo": "Medidas y calibres",
+          "productos": [
+            {
+              "nombre": "Cuadrado 15 × 15 cm",
+              "detalle": "Calibre 11",
+              "imagen": "img/catalogo/tubo_15x15_c11.webp"
+            },
+            {
+              "nombre": "Cuadrado 15 × 15 cm",
+              "detalle": "Calibre 12",
+              "imagen": "img/catalogo/tubo_15x15_c12.webp"
+            },
+            {
+              "nombre": "HR cuadrado 10 × 10 cm",
+              "detalle": "Calibre 16",
+              "imagen": "img/catalogo/tubo_hr_10x10_c16.webp"
+            },
+            {
+              "nombre": "HR rectangular 7,6 × 3,8 cm",
+              "detalle": "Calibre 16",
+              "imagen": "img/catalogo/tubo_hr_76x38_c16.webp"
+            },
+            {
+              "nombre": "CR rectangular 7,6 × 3,8 cm",
+              "detalle": "Calibre 18",
+              "imagen": "img/catalogo/tubo_cr_76x38_c18.webp"
+            },
+            {
+              "nombre": "CR rectangular 10,2 × 3,8 cm",
+              "detalle": "Calibre 18",
+              "imagen": "img/catalogo/tubo_cr_102x38_c18.webp"
+            },
+            {
+              "nombre": "Rectangular 10 × 5 cm",
+              "detalle": "Calibre 16"
+            },
+            {
+              "nombre": "Cuadrado 7 × 7 cm",
+              "detalle": "Calibre 14"
+            },
+            {
+              "nombre": "HR cuadrado 10 × 10 cm",
+              "detalle": "Calibre 11"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tejas",
+      "nombre": "Tejas y accesorios",
+      "categoria": "Techos",
+      "resumen": "Fabricamos tejas y las vendemos directo. Teja arquitectónica, máster, UPVC y zinc, con todos los accesorios para instalar tu techo.",
+      "portada": "img/catalogo/teja_fab2.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Arquitectónica",
+          "Prepintada · 1,08 × 6 m o 3,05 m · cal. 0,30 · 7 canales"
+        ],
+        [
+          "Máster",
+          "1,08 × 6 m · cal. 0,30 · 3 canales"
+        ],
+        [
+          "Teja UPVC",
+          "Blanca · 2 mm · 5,90 × 1,13 m"
+        ],
+        [
+          "Teja de zinc",
+          "3,05 × 0,80 m · cal. 32 · roja y azul"
+        ],
+        [
+          "Caballetero de zinc",
+          "3 m · rojo y azul"
+        ]
+      ],
+      "beneficios": [
+        "Fabricación propia",
+        "Venta directa",
+        "Accesorios para instalar",
+        "Disponibles en rojo y azul"
+      ],
+      "grupos": [
+        {
+          "titulo": "Tejas",
+          "productos": [
+            {
+              "nombre": "Arquitectónica roja",
+              "detalle": "1,08 × 6 m · cal. 0,30 · 7 canales",
+              "imagen": "img/catalogo/teja_arq_roja.webp"
+            },
+            {
+              "nombre": "Arquitectónica azul",
+              "detalle": "6 m o 3,05 m · cal. 0,30 · 7 canales",
+              "imagen": "img/catalogo/teja_arq_azul.webp"
+            },
+            {
+              "nombre": "Máster roja",
+              "detalle": "1,08 × 6 m · cal. 0,30 · 3 canales",
+              "imagen": "img/catalogo/teja_master_roja.webp"
+            },
+            {
+              "nombre": "Máster azul",
+              "detalle": "1,08 × 6 m · cal. 0,30 · 3 canales",
+              "imagen": "img/catalogo/teja_master_azul.webp"
+            },
+            {
+              "nombre": "UPVC cresta alta",
+              "detalle": "Blanca · 2 mm · 5,90 × 1,13 m",
+              "imagen": "img/catalogo/teja_cresta_alta.webp"
+            },
+            {
+              "nombre": "UPVC cresta baja",
+              "detalle": "Blanca · 2 mm · 5,90 × 1,13 m",
+              "imagen": "img/catalogo/teja_cresta_baja.webp"
+            },
+            {
+              "nombre": "Teja de zinc",
+              "detalle": "3,05 × 0,80 m · cal. 32 · roja y azul"
+            }
+          ]
+        },
+        {
+          "titulo": "Accesorios",
+          "productos": [
+            {
+              "nombre": "Caballetero de zinc",
+              "detalle": "3 m · rojo y azul",
+              "imagen": "img/catalogo/cabz_1.webp"
+            },
+            {
+              "nombre": "Caballetero UPVC",
+              "detalle": "Cresta alta y cresta baja",
+              "imagen": "img/catalogo/acc_caballetero.webp"
+            },
+            {
+              "nombre": "Canoera",
+              "detalle": "6 m × 9 mm",
+              "imagen": "img/catalogo/acc_canoera.webp"
+            },
+            {
+              "nombre": "Tapa",
+              "detalle": "Izquierda",
+              "imagen": "img/catalogo/acc_tapa.webp"
+            },
+            {
+              "nombre": "Esquinero",
+              "imagen": "img/catalogo/acc_esquinero.webp"
+            },
+            {
+              "nombre": "Unión",
+              "imagen": "img/catalogo/acc_union.webp"
+            },
+            {
+              "nombre": "Tornillo cresta baja",
+              "detalle": "Blanco, con capuchón",
+              "imagen": "img/catalogo/acc_torn_blanca.webp"
+            },
+            {
+              "nombre": "Tornillería azul",
+              "detalle": "Con capuchón",
+              "imagen": "img/catalogo/acc_torn_azul.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "esquineros",
+      "nombre": "Esquineros y perfiles",
+      "categoria": "Acabados",
+      "resumen": "Los remates que hacen ver profesional una pared de WPC, lámina marmolizada o PVC.",
+      "portada": "img/catalogo/esq_guill431.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Esquineros",
+          "Guill-431, 430, 435, 449 y 165"
+        ],
+        [
+          "Código",
+          "Cd-3001"
+        ],
+        [
+          "Perfiles",
+          "H, J, inter, outer, ángulo, esquinero J y L"
+        ],
+        [
+          "Acabados perfiles",
+          "Negro, plata y dorado"
+        ],
+        [
+          "Molduras",
+          "Dorada · media caña blanca 3 m"
+        ],
+        [
+          "Largo por pieza",
+          null
+        ]
+      ],
+      "beneficios": [
+        "Bordes y esquinas limpias",
+        "A tono con el panel",
+        "Protegen las esquinas",
+        "Acabado profesional"
+      ],
+      "grupos": [
+        {
+          "titulo": "Esquineros (Cd-3001)",
+          "productos": [
+            {
+              "nombre": "Guill-431",
+              "codigo": "Cd-3001",
+              "detalle": "Negro mármol",
+              "imagen": "img/catalogo/esq_guill431.webp"
+            },
+            {
+              "nombre": "Guill-430",
+              "codigo": "Cd-3001",
+              "detalle": "Blanco mármol",
+              "imagen": "img/catalogo/esq_guill430.webp"
+            },
+            {
+              "nombre": "Guill-435",
+              "codigo": "Cd-3001",
+              "detalle": "Gris madera",
+              "imagen": "img/catalogo/esq_guill435.webp"
+            },
+            {
+              "nombre": "Guill-449",
+              "codigo": "Cd-3001",
+              "detalle": "Madera",
+              "imagen": "img/catalogo/esq_guill449.webp"
+            },
+            {
+              "nombre": "Guill-165",
+              "codigo": "Cd-3001",
+              "detalle": "Negro",
+              "imagen": "img/catalogo/esq_guill165.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Perfiles para lámina",
+          "productos": [
+            {
+              "nombre": "Negro",
+              "imagen": "img/catalogo/perf_negro.webp"
+            },
+            {
+              "nombre": "Plata",
+              "imagen": "img/catalogo/perf_plata.webp"
+            },
+            {
+              "nombre": "Dorado",
+              "imagen": "img/catalogo/perf_dorado.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "También tenemos",
+          "productos": [
+            {
+              "nombre": "Esquinero J"
+            },
+            {
+              "nombre": "Esquinero L"
+            },
+            {
+              "nombre": "Moldura dorada"
+            },
+            {
+              "nombre": "Media caña blanca 3 m"
+            },
+            {
+              "nombre": "Cinta decorativa 5 cm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nomasclavos",
+      "nombre": "No Más Clavos",
+      "categoria": "Instalación",
+      "resumen": "Nuestro adhesivo de construcción para pegar sin taladro ni puntillas, con sellante de juntas para acabados. Venta en línea con envío a toda Colombia.",
+      "portada": null,
+      "venta": "en-linea",
+      "ficha": [
+        [
+          "Adhesivo",
+          "353 g y 200 g"
+        ],
+        [
+          "Sellante de juntas",
+          "200 g y 60 g"
+        ],
+        [
+          "Trío de pegantes",
+          "Adhesivo + 2 sellantes"
+        ],
+        [
+          "Superficies",
+          "Madera, concreto, cerámica, PVC, metal, drywall"
+        ],
+        [
+          "Tiempo de secado",
+          null
+        ],
+        [
+          "Venta",
+          "En línea con envío nacional · programa de revendedores"
+        ]
+      ],
+      "beneficios": [
+        "Pega sin clavos",
+        "Sella juntas",
+        "Resiste la humedad",
+        "Secado rápido",
+        "Ultra resistente"
+      ],
+      "grupos": [
+        {
+          "titulo": "Presentaciones",
+          "productos": [
+            {
+              "nombre": "No Más Clavos 353 g"
+            },
+            {
+              "nombre": "No Más Clavos 200 g"
+            },
+            {
+              "nombre": "Sellante de juntas 200 g"
+            },
+            {
+              "nombre": "Sellante de juntas 60 g"
+            },
+            {
+              "nombre": "Trío No Más Clavos",
+              "detalle": "Adhesivo + 2 sellantes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "herrajes",
+      "nombre": "Herrajes para muebles",
+      "categoria": "Muebles",
+      "resumen": "Todo para armar y renovar cocinas, clósets y muebles: bisagras de cierre lento, rieles ocultos, manijas, pistones y accesorios.",
+      "portada": null,
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Bisagras",
+          "35 mm de cierre lento y de doble fuerza"
+        ],
+        [
+          "Rieles",
+          "Telescópico, con amortiguador y oculto"
+        ],
+        [
+          "Manijas",
+          "96, 128, 160 y 192 mm"
+        ],
+        [
+          "Pistones",
+          "80 N y 100 N"
+        ],
+        [
+          "Clóset",
+          "Tubo oval 15 × 30 mm de 3 m y soporte"
+        ]
+      ],
+      "beneficios": [
+        "Cierre suave y silencioso",
+        "Para cocina, clóset y muebles",
+        "Medidas estándar"
+      ],
+      "grupos": [
+        {
+          "titulo": "Bisagras",
+          "productos": [
+            {
+              "nombre": "Doble fuerza 35 mm curva"
+            },
+            {
+              "nombre": "Doble fuerza 35 mm parche"
+            },
+            {
+              "nombre": "Doble fuerza 35 mm semiparche"
+            },
+            {
+              "nombre": "Hidráulica 35 mm cierre lento parche"
+            },
+            {
+              "nombre": "Hidráulica 35 mm cierre lento media"
+            },
+            {
+              "nombre": "Hidráulica 35 mm cierre lento cobertura"
+            },
+            {
+              "nombre": "Mariposa 4 × 1 (elevadora)"
+            },
+            {
+              "nombre": "Puerta acero inoxidable 3 × 3"
+            },
+            {
+              "nombre": "Puerta acero inoxidable 4 × 3"
+            },
+            {
+              "nombre": "Puerta acero inoxidable 5 × 3"
+            }
+          ]
+        },
+        {
+          "titulo": "Rieles y correderas",
+          "productos": [
+            {
+              "nombre": "Corredera telescópica"
+            },
+            {
+              "nombre": "Corredera con amortiguador"
+            },
+            {
+              "nombre": "Riel oculto 35 kg · 45 mm"
+            },
+            {
+              "nombre": "Riel oculto 35–45 kg · 40 mm"
+            }
+          ]
+        },
+        {
+          "titulo": "Manijas",
+          "productos": [
+            {
+              "nombre": "Manija 96 mm"
+            },
+            {
+              "nombre": "Manija 128 mm"
+            },
+            {
+              "nombre": "Manija 160 mm"
+            },
+            {
+              "nombre": "Manija 192 mm"
+            }
+          ]
+        },
+        {
+          "titulo": "Pistones, patas y clóset",
+          "productos": [
+            {
+              "nombre": "Pistón hidráulico 80 N"
+            },
+            {
+              "nombre": "Pistón hidráulico 100 N"
+            },
+            {
+              "nombre": "Pata niveladora 50 × 100 mm"
+            },
+            {
+              "nombre": "Tubo oval para clóset 15 × 30 × 0,6 mm, 3 m"
+            },
+            {
+              "nombre": "Soporte para tubo de clóset 15 × 30 mm"
+            }
+          ]
+        },
+        {
+          "titulo": "Cocina y cerraduras",
+          "productos": [
+            {
+              "nombre": "Escurridor de platos 60 cm"
+            },
+            {
+              "nombre": "Escurridor de platos 70 cm"
+            },
+            {
+              "nombre": "Escurridor de platos 80 cm"
+            },
+            {
+              "nombre": "Escurridor de platos 90 cm"
+            },
+            {
+              "nombre": "Cerradura para cajón 138-22"
+            },
+            {
+              "nombre": "Chapa de bola café con llave"
+            },
+            {
+              "nombre": "Chapa de bola cromada negra con llave"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tableros",
+      "nombre": "Tableros RH y aglomerados",
+      "categoria": "Muebles",
+      "resumen": "Tableros resistentes a la humedad para muebles de cocina, baño y clóset, con cantos y pegante para un acabado profesional.",
+      "portada": "img/catalogo/tableros_hero.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "RH 15 mm",
+          "2,44 × 1,83 m · 7 colores"
+        ],
+        [
+          "RH 5 mm",
+          "1,80 × 2,44 m · blanco y madera"
+        ],
+        [
+          "Aglomerado",
+          "Doble cara · 3 tonos"
+        ],
+        [
+          "Cantos",
+          "0,45 mm y 1,7 mm × 19 mm"
+        ],
+        [
+          "Pegante",
+          "Hot melt blanco para cantos"
+        ]
+      ],
+      "beneficios": [
+        "Resistente a la humedad",
+        "Ideal para ambientes cálidos y húmedos",
+        "Colores lisos y madera",
+        "Cantos y pegante para el acabado"
+      ],
+      "grupos": [
+        {
+          "titulo": "RH 15 mm · 2,44 × 1,83 m",
+          "productos": [
+            {
+              "nombre": "Blanco",
+              "codigo": "#2001",
+              "imagen": "img/catalogo/rh_2001.webp"
+            },
+            {
+              "nombre": "Gris claro",
+              "codigo": "#2064",
+              "imagen": "img/catalogo/rh_2064.webp"
+            },
+            {
+              "nombre": "Gris veteado",
+              "codigo": "#2021",
+              "imagen": "img/catalogo/rh_2021.webp"
+            },
+            {
+              "nombre": "Gris oscuro",
+              "codigo": "#2010",
+              "imagen": "img/catalogo/rh_2010.webp"
+            },
+            {
+              "nombre": "Negro",
+              "codigo": "#2004",
+              "imagen": "img/catalogo/rh_2004.webp"
+            },
+            {
+              "nombre": "Café claro",
+              "codigo": "#2031",
+              "imagen": "img/catalogo/rh_2031.webp"
+            },
+            {
+              "nombre": "Café",
+              "codigo": "#2032",
+              "imagen": "img/catalogo/rh_2032.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "RH 5 mm · 1,80 × 2,44 m",
+          "productos": [
+            {
+              "nombre": "Blanco",
+              "imagen": "img/catalogo/rh5_blanco.webp"
+            },
+            {
+              "nombre": "Madera",
+              "codigo": "JC001",
+              "imagen": "img/catalogo/rh5_jc001.webp"
+            },
+            {
+              "nombre": "Madera",
+              "codigo": "JC002",
+              "imagen": "img/catalogo/rh5_jc002.webp"
+            },
+            {
+              "nombre": "Madera",
+              "codigo": "JC003",
+              "imagen": "img/catalogo/rh5_jc003.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Aglomerado doble cara",
+          "productos": [
+            {
+              "nombre": "Gris ceniza",
+              "codigo": "M6553-1",
+              "imagen": "img/catalogo/agl_gris_ceniza.webp"
+            },
+            {
+              "nombre": "Roble ahumado",
+              "codigo": "M8196",
+              "imagen": "img/catalogo/agl_roble_ahumado.webp"
+            },
+            {
+              "nombre": "Roble natural",
+              "codigo": "M991",
+              "imagen": "img/catalogo/agl_roble_natural.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Cantos y pegante",
+          "productos": [
+            {
+              "nombre": "Canto delgado 0,45 × 19 mm",
+              "detalle": "Colores surtidos · por metro"
+            },
+            {
+              "nombre": "Canto grueso 1,7 × 19 mm",
+              "detalle": "Colores surtidos · por metro"
+            },
+            {
+              "nombre": "Pegante hot melt blanco"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fachada",
+      "nombre": "Láminas de fachada",
+      "categoria": "Paredes",
+      "resumen": "Paneles con acabado madera para renovar fachadas y muros con un estilo moderno, en tres tonos y con ángulos del mismo color.",
+      "portada": "img/catalogo/fachada_hero.webp",
+      "venta": "mayor",
+      "ficha": [
+        [
+          "Medida",
+          "2,90 m × 148 mm × 21 mm"
+        ],
+        [
+          "Colores",
+          "Light gray, red brown y teak"
+        ],
+        [
+          "Ángulos a juego",
+          "Light grey, red brown y teak"
+        ],
+        [
+          "Instalación",
+          null
+        ],
+        [
+          "Uso",
+          "Fachadas y muros"
+        ]
+      ],
+      "beneficios": [
+        "Look de madera moderno",
+        "Tres tonos para combinar",
+        "Ángulos del mismo color"
+      ],
+      "grupos": [
+        {
+          "titulo": "Colores",
+          "productos": [
+            {
+              "nombre": "Light gray",
+              "imagen": "img/catalogo/fach_light_gray.webp"
+            },
+            {
+              "nombre": "Red brown",
+              "imagen": "img/catalogo/fach_red_brown.webp"
+            },
+            {
+              "nombre": "Teak",
+              "imagen": "img/catalogo/fach_teak.webp"
+            }
+          ]
+        },
+        {
+          "titulo": "Complementos",
+          "productos": [
+            {
+              "nombre": "Ángulo light grey"
+            },
+            {
+              "nombre": "Ángulo red brown"
+            },
+            {
+              "nombre": "Ángulo teak"
+            },
+            {
+              "nombre": "Lámina pared línea económica tronco",
+              "detalle": "Acabado madera · medidas por confirmar"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import { initProductos } from './modules/productos.js';
 import { initHumedad } from './modules/humedad.js';
 import { initCalculadora } from './modules/calculadora.js';
 import { initCookies } from './cookies.js';
+import { initCurvi } from './curvi/curvi.js';
 import {
   initNav, initHero, initMotion, initPointer, initInstalacion, initAntesDespues, initComparativo,
   initReels, initFooter, initMayoristas,
@@ -32,6 +33,7 @@ initReels();
 initPointer(opts);
 initFooter();
 initCookies();
+initCurvi();
 
 fetch(`data/sedes.json?v=${__SEDES_V__}`)
   .then((r) => r.json())

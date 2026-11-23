@@ -3,9 +3,11 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { renderDirectorio } from './src/directorio.js';
+import { renderCatalogo } from './src/catalogo/render.js';
 import { sedesActivas, correoSede, ciudadDe } from './src/config.js';
 
 const leerSedes = () => JSON.parse(readFileSync(new URL('./public/data/sedes.json', import.meta.url), 'utf8'));
+const leerCatalogo = () => JSON.parse(readFileSync(new URL('./public/data/catalogo.json', import.meta.url), 'utf8'));
 
 // Arma desde public/data/sedes.json lo fijo de la página: contadores, ciudades, preguntas frecuentes,
 // pie de página y los datos estructurados LocalBusiness de cada sede activa.
@@ -39,6 +41,16 @@ function sedesHtml() {
   };
 }
 
+// Arma el catálogo (catalogo/index.html) desde public/data/catalogo.json: líneas, fichas y productos quedan en el HTML.
+function catalogoHtml() {
+  return {
+    name: 'catalogo-html',
+    transformIndexHtml(html) {
+      return html.includes('<!--CATALOGO_LINEAS-->') ? renderCatalogo(html, leerCatalogo(), leerSedes()) : html;
+    },
+  };
+}
+
 // Precarga la fuente del titular (es el elemento LCP en celular)
 function preloadFuenteTitular() {
   return {
@@ -58,13 +70,14 @@ export default defineConfig({
   base: './',
   // Huella de sedes.json: cambia la URL del fetch en cada cambio de datos (GitHub Pages lo cachea 10 min)
   define: { __SEDES_V__: JSON.stringify(createHash('sha1').update(readFileSync(new URL('./public/data/sedes.json', import.meta.url))).digest('hex').slice(0, 8)) },
-  plugins: [sedesHtml(), preloadFuenteTitular()],
+  plugins: [catalogoHtml(), sedesHtml(), preloadFuenteTitular()],
   build: {
     target: 'es2019',
     assetsInlineLimit: 0,
     rollupOptions: {
       input: {
         inicio: pagina('./index.html'),
+        catalogo: pagina('./catalogo/index.html'),
         premium: pagina('./premium/index.html'),
         invitacion: pagina('./invitacion/index.html'),
         privacidad: pagina('./politica-de-privacidad/index.html'),

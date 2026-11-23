@@ -82,6 +82,23 @@ Todo sale de este archivo, sin tocar código:
 
 Los contadores, textos de ciudades, preguntas frecuentes, pie de página y datos estructurados se escriben en el HTML al hacer `npm run build` (`src/directorio.js` y `vite.config.js`), así Google los lee sin JavaScript. En `index.html` aparecen como marcas `{{sedes.…}}`.
 
+## Catálogo de productos (`catalogo/`)
+
+Página pública en **https://pvclacurva.com/catalogo/**, enlazada desde el menú y desde la sección de productos del inicio. Todo sale de **`public/data/catalogo.json`**: al hacer `npm run build`, `src/catalogo/render.js` (llamado desde `vite.config.js`) escribe en el HTML las líneas, fichas técnicas y productos, así Google los lee sin JavaScript. `src/catalogo/catalogo.js` solo agrega el buscador, los filtros y la foto ampliada.
+
+- Cada línea tiene `id`, `nombre`, `categoria` (sale como filtro), `resumen`, `portada`, `ficha` (pares `[campo, valor]`; `null` se muestra «Por confirmar»), `beneficios` y `grupos` con sus `productos` (`nombre`, y opcionales `codigo`, `detalle`, `imagen`).
+- `venta`: `"en-linea"` muestra el botón «Pedir» en cada producto, con WhatsApp al número de `venta_en_linea`; `"mayor"` muestra «Cotizar al por mayor», con WhatsApp a la línea general de `sedes.json`. Hoy en línea solo están adhesivos decorativos y No Más Clavos.
+- Las fotos van en `public/img/catalogo/` en `.webp` (máximo 640 px de lado). Si una línea no tiene `portada`, se usa la primera foto de sus productos, y si no hay ninguna, un recuadro con ícono.
+- Los precios aún no se publican: cada producto muestra «Precio próximamente».
+
+## Curvi, asistente con IA
+
+El botón **Asesoría** (abajo a la derecha, en el inicio y en el catálogo) abre un chat con Curvi, el flujo de n8n alojado en el VPS. El código está en `src/curvi/` y la configuración en `CURVI` de `src/config.js`:
+
+- `chatUrl`: URL del nodo **Chat Trigger** del flujo de Curvi en n8n. El nodo debe estar público (*Make Chat Publicly Available*), en modo *Embedded Chat*, con `https://pvclacurva.com` en *Allowed Origins (CORS)*. La página le envía `{ action: 'sendMessage', sessionId, chatInput }` y muestra el campo `output` de la respuesta.
+- Si `chatUrl` está vacío o n8n no responde, el chat ofrece seguir con Curvi por WhatsApp (`whatsapp` / `whatsappTexto`).
+- Cualquier botón con el atributo `data-curvi` abre el chat; si trae texto (`data-curvi="Quiero asesoría sobre…"`), lo envía como primer mensaje.
+
 ## Tarjeta Cliente Premium (`premium/`)
 
 Página para clientes invitados: **https://pvclacurva.com/premium/**. No está enlazada desde el sitio, no aparece en el sitemap y tiene `noindex`, así que Google no la muestra. Ojo: cualquiera que tenga el enlace puede abrirla; la aprobación de cada solicitud la hace el equipo.

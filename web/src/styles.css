@@ -383,6 +383,7 @@ svg use { pointer-events: none; }
 .prod-grid::-webkit-scrollbar { display: none; }
 .prod { flex: 0 0 84%; scroll-snap-align: center; min-height: 430px; }
 .prod-note { margin: 12px 0 0; }
+.prod-cat { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
 .prod-nav { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; }
 .prod-nav__btn { width: 44px; height: 44px; background: rgba(255, 255, 255, 0.06); transition: background 0.3s, opacity 0.3s; }
 .prod-nav__btn svg { width: 18px; height: 18px; }
