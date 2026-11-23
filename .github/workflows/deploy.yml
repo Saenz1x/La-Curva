@@ -1,7 +1,6 @@
-# Compila web/ en cada push a main y lo publica en GitHub Pages y en el VPS de Hostinger.
-# El VPS se usa solo si existe la variable de repositorio VPS_HOST.
+# Compila web/ y lo publica en el VPS de Hostinger en cada push a main.
 # Configuración en GitHub → Settings → Secrets and variables → Actions:
-#   Variables: VPS_HOST (IP o dominio del VPS), VPS_USER (usuario SSH), VPS_PATH (carpeta web, p. ej. /var/www/pvclacurva.com)
+#   Variables: VPS_HOST (IP del VPS), VPS_USER (usuario SSH), VPS_PATH (carpeta web, /var/www/pvclacurva.com)
 #   Secretos:  VPS_SSH_KEY (clave privada SSH del usuario de despliegue)
 name: Publicar sitio
 
@@ -12,19 +11,14 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: web
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -33,43 +27,16 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
       - run: npm ci
+        working-directory: web
       - run: npm run build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: web/dist
-      - uses: actions/upload-artifact@v4
-        with:
-          name: sitio
-          path: web/dist
-          retention-days: 1
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
-
-  deploy-vps:
-    needs: build
-    if: vars.VPS_HOST != ''
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: sitio
-          path: dist
+        working-directory: web
       - name: Preparar SSH
         env:
           SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
           VPS_HOST: ${{ vars.VPS_HOST }}
         run: |
           install -m 700 -d ~/.ssh
-          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_deploy
+          printf '%s\n' "$SSH_KEY" | tr -d '\r' > ~/.ssh/id_deploy
           chmod 600 ~/.ssh/id_deploy
           ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
       - name: Subir al VPS
@@ -78,4 +45,4 @@ jobs:
           VPS_USER: ${{ vars.VPS_USER }}
           VPS_PATH: ${{ vars.VPS_PATH }}
         run: |
-          rsync -az --delete -e "ssh -i ~/.ssh/id_deploy" dist/ "$VPS_USER@$VPS_HOST:$VPS_PATH/"
+          rsync -az --delete -e "ssh -i ~/.ssh/id_deploy" web/dist/ "$VPS_USER@$VPS_HOST:$VPS_PATH/"

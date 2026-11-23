@@ -26,7 +26,15 @@ npm run preview    # sirve dist en http://localhost:4173
 - **Vercel:** importa el repo, *Root Directory* `web`, framework "Vite". Vercel detecta el resto.
 - **GitHub Pages:** sube el contenido de `dist/` a la rama `gh-pages` (o usa la acción oficial "Deploy static content to Pages" apuntando a `web/dist`).
 
-El dominio es **pvclacurva.com** (DNS en Hostinger apuntando a GitHub Pages). Si algún día cambia, actualiza `public/CNAME`, `public/sitemap.xml`, `public/robots.txt` y las etiquetas `canonical` / `og:` de `index.html`.
+### Cómo se publica hoy
+
+El sitio vive en el **VPS de Hostinger** (`179.66.155.36`). Cada push a `main` lo publica solo: la acción `.github/workflows/deploy.yml` corre `npm run build` y copia `web/dist/` por SSH (rsync, usuario `deploy`) a `/var/www/pvclacurva.com` en el VPS.
+
+- En el VPS, el proyecto Docker **pvclacurva** (Nginx) sirve esa carpeta detrás de Traefik, que pone y renueva el certificado HTTPS. `www` y `http` redirigen a `https://pvclacurva.com`.
+- La acción usa, en GitHub → Settings → Secrets and variables → Actions, las variables `VPS_HOST`, `VPS_USER`, `VPS_PATH` y el secreto `VPS_SSH_KEY`.
+- Para publicar sin hacer push: pestaña **Actions** → *Publicar sitio* → *Run workflow*.
+
+El dominio es **pvclacurva.com** (DNS en Hostinger apuntando al VPS). Si algún día cambia, actualiza el dominio en el proyecto Docker del VPS, `public/sitemap.xml`, `public/robots.txt` y las etiquetas `canonical` / `og:` de `index.html`.
 
 ## Agregar o editar una sede
 
