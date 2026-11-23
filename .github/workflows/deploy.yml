@@ -1,4 +1,8 @@
-# Compila web/ y lo publica en GitHub Pages en cada push a main.
+# Compila web/ en cada push a main y lo publica en GitHub Pages y en el VPS de Hostinger.
+# El VPS se usa solo si existe la variable de repositorio VPS_HOST.
+# Configuración en GitHub → Settings → Secrets and variables → Actions:
+#   Variables: VPS_HOST (IP o dominio del VPS), VPS_USER (usuario SSH), VPS_PATH (carpeta web, p. ej. /var/www/pvclacurva.com)
+#   Secretos:  VPS_SSH_KEY (clave privada SSH del usuario de despliegue)
 name: Publicar sitio
 
 on:
@@ -34,6 +38,11 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web/dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sitio
+          path: web/dist
+          retention-days: 1
 
   deploy:
     needs: build
@@ -44,3 +53,29 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy-vps:
+    needs: build
+    if: vars.VPS_HOST != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: sitio
+          path: dist
+      - name: Preparar SSH
+        env:
+          SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_HOST: ${{ vars.VPS_HOST }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -H "$VPS_HOST" >> ~/.ssh/known_hosts
+      - name: Subir al VPS
+        env:
+          VPS_HOST: ${{ vars.VPS_HOST }}
+          VPS_USER: ${{ vars.VPS_USER }}
+          VPS_PATH: ${{ vars.VPS_PATH }}
+        run: |
+          rsync -az --delete -e "ssh -i ~/.ssh/id_deploy" dist/ "$VPS_USER@$VPS_HOST:$VPS_PATH/"
