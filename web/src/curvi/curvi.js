@@ -37,6 +37,10 @@ function sesion() {
   return id;
 }
 
+// Conversación de esta pestaña: se vuelve a mostrar al pasar del inicio al catálogo (n8n recuerda el contexto por sessionId)
+const historial = () => { try { return JSON.parse(guardado.get('curvi-historial')) || []; } catch { return []; } };
+const anotar = (quien, texto) => guardado.set('curvi-historial', JSON.stringify([...historial(), [quien, texto]].slice(-40)));
+
 const linkWa = (texto = 'Hola Curvi, vengo de la página web y quiero asesoría') => waLink(CURVI.whatsapp, texto);
 
 function burbuja(html, quien) {
@@ -78,6 +82,8 @@ async function enviar(texto) {
     const out = salida.output ?? salida.text ?? salida.respuesta;
     if (!out) throw new Error('vacio');
     pensando.innerHTML = formato(out);
+    anotar('yo', texto);
+    anotar('bot', out);
   } catch {
     pensando.innerHTML = respaldoWa(texto);
   } finally {
@@ -114,11 +120,12 @@ export function initCurvi({ privacidad = 'politica-de-privacidad/' } = {}) {
     <section class="curvi__panel" id="curvi-panel" role="dialog" aria-label="Asesoría con Curvi" hidden>
       <header class="curvi__head">
         <span class="curvi__avatar">${ICONO}</span>
-        <div><b>Curvi</b><span>Asistente con IA de PVC La Curva</span></div>
+        <div><b>Curvi</b><span>Asesor virtual · Soluciones livianas, obra segura</span></div>
         <button type="button" class="curvi__x" aria-label="Cerrar">${CERRAR}</button>
       </header>
       <div class="curvi__log" aria-live="polite">
-        <div class="curvi__msg curvi__msg--bot">¡Hola! Soy <b>Curvi</b>. Te ayudo a escoger el producto, calcular cuánto material necesitas y cómo comprarlo. ¿Qué estás pensando hacer?</div>
+        <div class="curvi__msg curvi__msg--bot">¡Hola! Soy <b>Curvi</b> 🛠️, el asesor virtual de PVC La Curva.</div>
+        <div class="curvi__msg curvi__msg--bot">¿Qué estás buscando para tu obra?</div>
       </div>
       <div class="curvi__sug">${SUGERENCIAS.map((s) => `<button type="button">${esc(s)}</button>`).join('')}</div>
       <form class="curvi__form">
@@ -139,6 +146,10 @@ export function initCurvi({ privacidad = 'politica-de-privacidad/' } = {}) {
     sug: root.querySelector('.curvi__sug'),
     input: root.querySelector('input'),
   };
+  const previo = historial();
+  for (const [quien, texto] of previo) burbuja(quien === 'bot' ? formato(texto) : esc(texto), quien);
+  if (previo.length) el.sug.hidden = true;
+
   el.btn.addEventListener('click', () => (el.panel.hidden ? abrirCurvi() : cerrarCurvi()));
   root.querySelector('.curvi__x').addEventListener('click', cerrarCurvi);
   root.querySelector('form').addEventListener('submit', (e) => {
